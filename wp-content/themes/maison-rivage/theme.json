@@ -2,6 +2,181 @@
   "$schema": "https://schemas.wp.org/wp/6.7/theme.json",
   "version": 3,
   "settings": {
-    "appearanceTools": true
-  }
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1240px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "lagoon",
+          "name": "Lagoon ink",
+          "color": "#183E35"
+        },
+        {
+          "slug": "ivory",
+          "name": "Ivory plaster",
+          "color": "#F8F7F2"
+        },
+        {
+          "slug": "sand",
+          "name": "Sandstone",
+          "color": "#E7E1D4"
+        },
+        {
+          "slug": "leaf",
+          "name": "Leaf",
+          "color": "#617461"
+        },
+        {
+          "slug": "linen",
+          "name": "White linen",
+          "color": "#FFFFFF"
+        },
+        {
+          "slug": "charcoal",
+          "name": "Warm charcoal",
+          "color": "#282D29"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "name": "Literata",
+          "slug": "literata",
+          "fontFamily": "Literata, Georgia, serif",
+          "fontFace": [
+            {
+              "fontFamily": "Literata",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": [
+                "file:./assets/fonts/Literata72pt-Regular.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Literata",
+              "fontStyle": "italic",
+              "fontWeight": "400",
+              "src": [
+                "file:./assets/fonts/Literata72pt-RegularItalic.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Manrope",
+          "slug": "manrope",
+          "fontFamily": "Manrope, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Manrope",
+              "fontStyle": "normal",
+              "fontWeight": "200 800",
+              "src": [
+                "file:./assets/fonts/Manrope-VariableFont_wght.woff2"
+              ]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.82rem"
+        },
+        {
+          "name": "Body",
+          "slug": "medium",
+          "size": "1rem"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "1.25rem"
+        },
+        {
+          "name": "Heading",
+          "slug": "x-large",
+          "size": "2.8rem"
+        },
+        {
+          "name": "Display",
+          "slug": "xx-large",
+          "size": "4.7rem"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|ivory",
+      "text": "var:preset|color|charcoal"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|manrope",
+      "fontSize": "1rem",
+      "lineHeight": "1.75"
+    },
+    "spacing": {
+      "blockGap": "1.5rem"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var:preset|color|lagoon"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|literata",
+          "fontWeight": "400",
+          "lineHeight": "1.16",
+          "letterSpacing": "-0.035em"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|lagoon"
+        }
+      },
+      "button": {
+        "border": {
+          "radius": "0"
+        },
+        "color": {
+          "background": "var:preset|color|lagoon",
+          "text": "var:preset|color|linen"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|manrope",
+          "fontSize": "0.8rem",
+          "fontWeight": "600"
+        },
+        "spacing": {
+          "padding": {
+            "top": "1rem",
+            "bottom": "1rem",
+            "left": "1.5rem",
+            "right": "1.5rem"
+          }
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
 }

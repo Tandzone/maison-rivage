@@ -6,6 +6,7 @@
 .idea/
 .vscode/
 backups/
+artifacts/
 vendor/
 node_modules/
 wp-content/uploads/

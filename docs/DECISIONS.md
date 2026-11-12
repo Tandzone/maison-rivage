@@ -83,3 +83,7 @@ The user accepted the architecture in `site-architecture.md`, including category
 The user authorized chantier 3 and selected a public GitHub repository on the connected Tandzone account. Repository name: `maison-rivage`.
 
 Implementation baseline: WordPress 7.1.4 on PHP 8.3/Apache, MariaDB 11.4, WP-CLI on PHP 8.3, Mailpit 1.33.1. Container artifacts are pinned by digest in `compose.yaml`. Twenty Twenty-Five 1.5 is the selected parent for the child theme. Business plugin is a scaffold, with features deferred to later chantiers. Setup creates English starter pages and preserves them on repeat runs. Local secrets and runtime data stay out of Git. Website and Mailpit listen only on loopback; Compose is local-development configuration.
+
+## D14 — Retain standard WordPress
+
+After discussing Bedrock and hosting constraints, the user explicitly chose to continue with standard WordPress. No Bedrock migration. Hosting provider, budget commitment and production email provider remain undecided; investigate multi-site hosting for several portfolio demos before choosing an offer.

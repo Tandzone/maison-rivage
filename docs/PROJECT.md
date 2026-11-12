@@ -18,6 +18,7 @@ Primary priority: demonstrate WordPress development skills through a reviewable 
 - Six physical rooms: two Garden Rooms, two Ocean Balcony Rooms and two Rivage Suites. Guests choose a category; room assignment happens at confirmation.
 - Events can take place in the hall or a particular room.
 - Docker-based local development; aim for an easy deployment path.
+- Standard WordPress retained after evaluating Bedrock; hosting and production email provider remain undecided.
 - Custom WordPress business plugin for rooms, availability, reservations, events and notifications, independent of the theme.
 
 See [decisions](DECISIONS.md) for reservation rules and [ideas](IDEAS.md) for proposals that still need validation.
@@ -29,7 +30,7 @@ See [decisions](DECISIONS.md) for reservation rules and [ideas](IDEAS.md) for pr
 | 1 | Concept and scope | Complete — approved brief |
 | 2 | Site architecture | Complete — architecture approved |
 | 3 | Local development environment | Complete — running and verified |
-| 4 | Theme and interface | Not started |
+| 4 | Theme and interface | In progress — first visual preview ready for review |
 | 5 | Content and administration | Not started |
 | 6 | Reservation workflow | Not started |
 | 7 | Events and news | Not started |
@@ -41,11 +42,11 @@ The outline is a planning reference, not an implementation approval for every pr
 
 ## Current state
 
-Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. Docker services, repeatable setup, starter pages, a Twenty Twenty-Five child theme and business plugin scaffold are in place. Credentials are in ignored local `.env`. Reservation features and final styling are not implemented. See `README.md` for commands and `VISUAL-REFERENCE.md` for imagery.
+Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. First visual preview includes home, room listing/category pages, about, events, contact, booking-unavailable state, policies, journal/single and 404 templates. Native block patterns, responsive navigation and locally served fonts are in the child theme. Credentials are in ignored local `.env`. Business features are not implemented; room illustrations and hall/event drafts need review. See `design-direction.md`, `README.md` and `VISUAL-REFERENCE.md`.
 
 ## Next — chantier 4: theme and interface
 
-Chantiers 1–3 are complete. Next: design and implement the theme's global styles, header/footer and public page layouts using the approved visual direction. Business features remain for chantiers 5–7. Source is published at https://github.com/Tandzone/maison-rivage on `main`; this is source publication, not production website deployment.
+Chantiers 1–3 are complete. Review the first visual version with the user before closing chantier 4. Next design work depends on feedback and final imagery. Business features remain for chantiers 5–7. Source repository: https://github.com/Tandzone/maison-rivage (`main`); source publication is not production website deployment.
 
 ## Memory map
 
@@ -56,3 +57,4 @@ Chantiers 1–3 are complete. Next: design and implement the theme's global styl
 - `VISUAL-REFERENCE.md`: approved visual anchor, image register and consistency rules.
 - `project-brief.md`: English V1 concept, scope, boundaries and delivery criteria.
 - `site-architecture.md`: approved sitemap and visitor/admin journeys.
+- `design-direction.md`: design tokens, layout rationale and preview limitations.
