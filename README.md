@@ -2,7 +2,7 @@
 
 A fictional Madagascar-inspired boutique hotel website, built as a WordPress development portfolio project. Public content and administration labels are in English.
 
-**Current stage:** second local visual preview, awaiting design review. The child theme includes native block templates, reusable patterns, local fonts and responsive layouts. The reservation engine is not implemented yet. See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md) and [site architecture](docs/site-architecture.md).
+**Current stage:** approved V2 interface with an operational room catalogue and editorial administration. The plugin manages category details, rates and six private physical rooms; the site renders those values dynamically. The reservation engine is not implemented yet. See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md), [site architecture](docs/site-architecture.md) and [content model](docs/content-model.md).
 
 The second visual pass adds a coastal wordmark, an asymmetric inside/outside opening, alternating room layouts and dedicated room facts. See [design direction](docs/design-direction.md) for the rationale. Images still use the approved atmosphere reference; category-specific galleries remain to be created.
 
@@ -21,13 +21,21 @@ Requirements: Docker Engine or Docker Desktop with Docker Compose v2+, Python 3 
 - Captured email: [localhost:8025](http://localhost:8025)
 - Admin username and password: `WP_ADMIN_USER` and `WP_ADMIN_PASSWORD` in your generated `.env` file.
 
-The initial image downloads can take several minutes. `setup` waits for the services, installs WordPress if needed, installs the parent theme, activates our child theme and plugin, and creates starter/design pages. Rerunning it preserves existing page content and existing administrator credentials. It does not yet seed business room/reservation records.
+The initial image downloads can take several minutes. `setup` waits for the services, installs WordPress if needed, installs the parent theme, activates our child theme and plugin, and creates pages, hotel inventory, media and journal stories. Rerunning it preserves existing content and administrator credentials. Reservation records are not implemented yet.
 
-The first design seeds only untouched starter pages (plus the original untouched WordPress privacy draft) and creates the category preview pages. Subsequent page edits belong to the editor and are preserved. Patterns are available in the block inserter, and templates/header/footer in the Site Editor. The untouched WordPress “Hello world!” sample post is moved to Trash to leave an honest journal empty state. Public room pages are presentation placeholders until the content chantier defines their business model.
+The first design seeds only untouched starter pages (plus the original untouched WordPress privacy draft) and creates the category preview pages. Subsequent page edits belong to the editor and are preserved. Patterns are available in the block inserter, and templates/header/footer in the Site Editor. The untouched WordPress “Hello world!” sample post is moved to Trash to leave an honest journal empty state. Public room pages now act as the editable category records used by the hotel catalogue.
 
 The V2 design migration upgrades only the five untouched V1 home/room previews, checking content hashes normalized for the site URL. It preserves edited pages and stores the previous preview in `_rivage_design_v1_content` post metadata. Rerunning setup does not overwrite V2 editor content.
 
-Booking and contact forms are not active. The booking page explicitly states that reservations are unavailable. Generated hall/event imagery and category illustrations are local design previews, pending individual review and final image preparation. Rates have not been invented.
+Booking and contact forms are not active. The booking page explicitly states that reservations are unavailable. Generated hall/event imagery and category illustrations are local previews, with category-specific galleries still to be prepared. User-approved fictional rates are 95 / 135 / 195 EUR per room, per night.
+
+## Editing hotel content
+
+Open **Maison Rivage → Room Types** in administration. Edit a category's page title, excerpt, Featured image and block content; use its **Maison Rivage — Room Type Details** meta box for guest limits, outdoor space and rate. In the block editor, expand the **Meta Boxes** pane if it is collapsed.
+
+**Maison Rivage → Rooms** manages the six private physical records and their category/operational status. Filters help inspect one category or rooms out of service. **Overview** shows current inventory counts. Hotel data management is restricted to administrators. Journal stories use ordinary **Posts**.
+
+The catalogue and room facts are dynamic shortcodes in native Shortcode blocks. Existing edited preview pages are preserved; insert the shortcodes listed in [content model](docs/content-model.md) manually if setup reports that it skipped a customized page. Prices are stored in integer cents, and the plugin has no dependency on the parent theme's business logic.
 
 `init` does not overwrite an existing `.env`. Change ports in `.env` before the first setup if needed; keep `WP_URL` consistent with `WORDPRESS_PORT`. Changing the site address after installation also requires updating WordPress URLs and existing content appropriately. Changing environment passwords does not rotate credentials already stored in existing database volumes.
 
@@ -40,6 +48,7 @@ Booking and contact forms are not active. The booking page explicitly states tha
 ./bin/dev wp plugin list      # Run WP-CLI against the shared install
 ./bin/dev wp theme list
 ./bin/dev check               # Core checksums, active theme/plugin, PHP lint, SMTP smoke test
+./bin/dev wp eval-file /workspace/scripts/tests/catalogue.php  # Local catalogue integration checks
 ```
 
 Database and WordPress runtime files live in named Docker volumes. Source folders are mounted read-only into containers: edit them in this repository. WordPress core, parent theme and uploaded media are not committed. `docker compose down -v` **deletes local WordPress and database volumes**; use it only when deliberately discarding local data.
@@ -53,7 +62,7 @@ Database and WordPress runtime files live in named Docker volumes. Source folder
 | WP-CLI / PHP 8.3 | Installation and maintenance commands, same files and environment |
 | Mailpit | Local SMTP capture; messages are not delivered to real recipients |
 | `wp-content/themes/maison-rivage/` | Child theme of Twenty Twenty-Five |
-| `wp-content/plugins/maison-rivage-core/` | Custom business plugin foundation |
+| `wp-content/plugins/maison-rivage-core/` | Room catalogue and private inventory |
 | `wp-content/mu-plugins/rivage-local-mail.php` | Local-only SMTP routing |
 | `scripts/` | Repeatable setup, starter pages and smoke checks |
 | `assets/concepts/` | Generated visual references and drafts |
@@ -71,7 +80,7 @@ The smoke check sends a message titled **Maison Rivage local smoke test** to `gu
 
 ## Portfolio scope
 
-The planned custom plugin covers six physical rooms across three categories, category-based requests, email verification, manual confirmation, physical room assignment, overlap prevention, notifications and room-occupying events. These business features belong to later chantiers.
+Implemented: six private physical rooms, three editable public category pages, nightly rates, guest limits, category/status administration filters, dynamic room collections and journal demo content. Planned next: category-based requests, email verification, manual confirmation, physical room assignment, overlap prevention, notifications and room-occupying events.
 
 Hotel images are AI-generated concepts for a fictional property. Follow [the visual reference guide](docs/VISUAL-REFERENCE.md) and review individual drafts before publishing them.
 

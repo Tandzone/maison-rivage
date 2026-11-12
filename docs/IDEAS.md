@@ -11,7 +11,7 @@ These items are proposals, not approved decisions. Move accepted choices to `DEC
 ## Proposed technical direction
 
 - Twenty Twenty-Five child theme and Docker Compose foundation are implemented; see D13 and README.
-- Add reproducible hotel/room/event demo data in the content chantier; starter pages are already seeded.
+- Room inventory, category metadata, media and three journal stories are seeded. Event records remain for chantier 7.
 - WordPress hosting with HTTPS, backups and migration support; provider TBD.
 
 ## Approved site structure
@@ -20,7 +20,7 @@ See `site-architecture.md` and D12 for approved pages, navigation and journeys.
 
 ## Detailed workflow and deferred features
 
-- Simple category rates and listings without ticketing/registration are approved. Set actual prices later; seasonal rates and promotions are deferred.
+- Simple category rates are approved at 95/135/195 EUR; seasonal rates and promotions are deferred. Event listings remain without ticketing/registration.
 - No external booking-platform synchronization.
 - One language at launch.
 - Define room assignment interface and category availability display; category-based requests and assignment on confirmation are approved.

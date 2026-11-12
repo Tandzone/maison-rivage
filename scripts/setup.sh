@@ -18,4 +18,5 @@ wp theme activate maison-rivage
 wp plugin activate maison-rivage-core
 wp eval-file /workspace/scripts/seed-pages.php
 wp eval-file /workspace/scripts/seed-design.php
+wp eval-file /workspace/scripts/seed-hotel.php
 echo 'Setup complete. Admin credentials are in your local .env file.'

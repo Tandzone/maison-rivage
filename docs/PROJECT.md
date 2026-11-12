@@ -30,8 +30,8 @@ See [decisions](DECISIONS.md) for reservation rules and [ideas](IDEAS.md) for pr
 | 1 | Concept and scope | Complete — approved brief |
 | 2 | Site architecture | Complete — architecture approved |
 | 3 | Local development environment | Complete — running and verified |
-| 4 | Theme and interface | In progress — second visual preview ready for review |
-| 5 | Content and administration | Not started |
+| 4 | Theme and interface | Complete — V2 visual direction approved |
+| 5 | Content and administration | Complete — room catalogue and journal administration |
 | 6 | Reservation workflow | Not started |
 | 7 | Events and news | Not started |
 | 8 | Verification and polish | Not started |
@@ -42,11 +42,11 @@ The outline is a planning reference, not an implementation approval for every pr
 
 ## Current state
 
-Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. The visual preview includes home, room listing/category pages, about, events, contact, booking-unavailable state, policies, journal/single and 404 templates. Native block patterns, responsive navigation and locally served fonts are in the child theme. Credentials are in ignored local `.env`. Business features are not implemented; room illustrations and hall/event drafts need review. See `design-direction.md`, `README.md` and `VISUAL-REFERENCE.md`.
+Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. V2 design is approved. The plugin now manages three category Pages, six private physical rooms, guest limits and approved EUR rates (95/135/195). Room collections/facts are dynamic, three journal stories and media are seeded, and native administration has inventory filters and safe field validation. Booking and contact forms remain inactive; reservation tools and event administration come in chantiers 6–7. Category-specific imagery remains for final content/polish. See `content-model.md` and README.
 
-## Next — chantier 4: theme and interface
+## Next — chantier 6: reservation workflow
 
-Chantiers 1–3 are complete. Review the second visual version with the user before closing chantier 4: coastal wordmark, asymmetric home opening, alternating room catalogue and dedicated room facts layouts. Category-specific images are still pending. Business features remain for chantiers 5–7. Source repository: https://github.com/Tandzone/maison-rivage (`main`); source publication is not production website deployment.
+Chantiers 1–5 are complete for their current boundaries. Before the booking implementation, settle arrival/departure hours, child-age/minimum-adult rules, email verification expiry and guest/admin notification triggers. Then implement availability, requests and administrative room assignment with conflict prevention. Event management stays in chantier 7; final imagery/polish remains tracked. Repository: https://github.com/Tandzone/maison-rivage (`main`); source publication is not production website deployment.
 
 ## Memory map
 
@@ -58,3 +58,4 @@ Chantiers 1–3 are complete. Review the second visual version with the user bef
 - `project-brief.md`: English V1 concept, scope, boundaries and delivery criteria.
 - `site-architecture.md`: approved sitemap and visitor/admin journeys.
 - `design-direction.md`: design tokens, layout rationale and preview limitations.
+- `content-model.md`: editable category Pages, private rooms, rates, administration and verification.

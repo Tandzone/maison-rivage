@@ -13,9 +13,7 @@
 <!-- wp:paragraph {"className":"rivage-eyebrow"} -->
 <p class="rivage-eyebrow">YOUR STAY AT MAISON RIVAGE</p>
 <!-- /wp:paragraph -->
-<!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">Garden Room</h1>
-<!-- /wp:heading -->
+<!-- wp:post-title {"level":1} /-->
 </div>
 <!-- /wp:group -->
 <!-- wp:group {"className":"rivage-room-hero rivage-wrap","layout":{"type":"default"}} -->
@@ -34,9 +32,7 @@
 <!-- wp:paragraph -->
 <p>A quiet corner among the leaves, with a terrace for slow mornings.</p>
 <!-- /wp:paragraph -->
-<!-- wp:html -->
-<dl class="rivage-room-facts"><div><dt>Guests</dt><dd>2 guests</dd></div><div><dt>Your outdoor space</dt><dd>Garden terrace</dd></div></dl>
-<!-- /wp:html -->
+<!-- wp:shortcode -->[rivage_room_facts]<!-- /wp:shortcode -->
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/booking/' ) ); ?>">Plan Your Stay</a></div>

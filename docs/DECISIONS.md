@@ -91,3 +91,13 @@ After discussing Bedrock and hosting constraints, the user explicitly chose to c
 ## D15 — Strengthen the child theme identity
 
 The user requested a stronger visual identity so the website feels less like the parent theme, and approved a second design pass on the home and room pages. Keep Twenty Twenty-Five as the parent, native WordPress editing and the established photographic direction. The resulting visual proposal remains pending user review; no production publication or new room imagery is implied.
+
+The user subsequently approved the second version (“c'est beaucoup plus joli, continuons”). Chantier 4's interface direction is accepted; category-specific photographs and production image review remain tracked for final content/polish.
+
+## D16 — Demo rates
+
+The user approved EUR nightly rates: Garden Room 95 €, Ocean Balcony Room 135 €, Rivage Suite 195 €. Rates are per room, per night. Tax presentation and cancellation policy are not finalized.
+
+## D17 — Content implementation
+
+Implementation choice for chantier 5: keep room types as the existing public category Pages (with hotel metadata) and use a nonpublic `rivage_room` post type for physical inventory. This preserves URLs and block editing without duplicate category records. Plugin shortcodes render collections and facts from centralized data. Hotel field changes require administrative capabilities and nonces. Journal uses standard WordPress Posts. Booking and event operations remain for chantiers 6–7.
