@@ -2,7 +2,9 @@
 
 A fictional Madagascar-inspired boutique hotel website, built as a WordPress development portfolio project. Public content and administration labels are in English.
 
-**Current stage:** first local visual preview, awaiting design review. The child theme includes native block templates, reusable patterns, local fonts and responsive layouts. The reservation engine is not implemented yet. See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md) and [site architecture](docs/site-architecture.md).
+**Current stage:** second local visual preview, awaiting design review. The child theme includes native block templates, reusable patterns, local fonts and responsive layouts. The reservation engine is not implemented yet. See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md) and [site architecture](docs/site-architecture.md).
+
+The second visual pass adds a coastal wordmark, an asymmetric inside/outside opening, alternating room layouts and dedicated room facts. See [design direction](docs/design-direction.md) for the rationale. Images still use the approved atmosphere reference; category-specific galleries remain to be created.
 
 ## Local development
 
@@ -22,6 +24,8 @@ Requirements: Docker Engine or Docker Desktop with Docker Compose v2+, Python 3 
 The initial image downloads can take several minutes. `setup` waits for the services, installs WordPress if needed, installs the parent theme, activates our child theme and plugin, and creates starter/design pages. Rerunning it preserves existing page content and existing administrator credentials. It does not yet seed business room/reservation records.
 
 The first design seeds only untouched starter pages (plus the original untouched WordPress privacy draft) and creates the category preview pages. Subsequent page edits belong to the editor and are preserved. Patterns are available in the block inserter, and templates/header/footer in the Site Editor. The untouched WordPress “Hello world!” sample post is moved to Trash to leave an honest journal empty state. Public room pages are presentation placeholders until the content chantier defines their business model.
+
+The V2 design migration upgrades only the five untouched V1 home/room previews, checking content hashes normalized for the site URL. It preserves edited pages and stores the previous preview in `_rivage_design_v1_content` post metadata. Rerunning setup does not overwrite V2 editor content.
 
 Booking and contact forms are not active. The booking page explicitly states that reservations are unavailable. Generated hall/event imagery and category illustrations are local design previews, pending individual review and final image preparation. Rates have not been invented.
 

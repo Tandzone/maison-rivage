@@ -5,16 +5,49 @@
  * Categories: featured
  */
 ?>
-<!-- wp:group {"className":"rivage-hero-heading rivage-wrap","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-hero-heading rivage-wrap"><!-- wp:group {"className":"rivage-hero-title","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-hero-title"><!-- wp:paragraph {"className":"rivage-eyebrow"} --><p class="rivage-eyebrow">A BOUTIQUE RETREAT · MADAGASCAR</p><!-- /wp:paragraph -->
-<!-- wp:heading {"level":1} --><h1 class="wp-block-heading ">Somewhere to<br><em>stay a little longer.</em></h1><!-- /wp:heading -->
-</div><!-- /wp:group -->
-<!-- wp:paragraph {"className":"rivage-hero-note"} --><p class="rivage-hero-note">Between a tropical garden <br>and the Indian Ocean. <br>A quieter kind of escape.</p><!-- /wp:paragraph -->
-</div><!-- /wp:group -->
-<!-- wp:group {"className":"rivage-hero","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-hero"><!-- wp:image {"sizeSlug":"full","className":"rivage-hero-image"} --><figure class="wp-block-image size-full rivage-hero-image"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/coastal-suite.png' ); ?>" alt="A shaded timber balcony overlooking a tropical cove, beside an ivory bedroom with green textiles"/></figure><!-- /wp:image -->
-<!-- wp:group {"className":"rivage-hero-caption","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-hero-caption"><!-- wp:paragraph {"className":"rivage-eyebrow"} --><p class="rivage-eyebrow">THE ROOM. THE VIEW. YOUR OWN PACE.</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {"className":"rivage-text-link"} --><p class="rivage-text-link"><a href="<?php echo esc_url( home_url( '/rooms/' ) ); ?>">Find your room <span aria-hidden="true">↗</span></a></p><!-- /wp:paragraph -->
-</div><!-- /wp:group -->
-</div><!-- /wp:group -->
+<!-- wp:group {"className":"rivage-arrival rivage-wrap","layout":{"type":"default"}} -->
+<div class="wp-block-group rivage-arrival rivage-wrap">
+<!-- wp:image {"sizeSlug":"full","className":"rivage-arrival-view rivage-hero-image"} -->
+<figure class="wp-block-image size-full rivage-arrival-view rivage-hero-image"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/coastal-suite.png' ); ?>" alt="A shaded timber balcony opening onto the tropical cove"/></figure>
+<!-- /wp:image -->
+<!-- wp:group {"className":"rivage-arrival-copy","layout":{"type":"default"}} -->
+<div class="wp-block-group rivage-arrival-copy">
+<!-- wp:paragraph {"className":"rivage-eyebrow"} -->
+<p class="rivage-eyebrow">MAISON RIVAGE · MADAGASCAR</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Where the house<br>meets <em>the ocean.</em></h1>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"className":"rivage-arrival-note"} -->
+<p class="rivage-arrival-note">Six rooms, open doors.<br>A quieter stretch of the Indian Ocean.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"rivage-text-link"} -->
+<p class="rivage-text-link"><a href="<?php echo esc_url( home_url( '/rooms/' ) ); ?>">Find your room <span aria-hidden="true">↗</span></a></p>
+<!-- /wp:paragraph -->
+<!-- wp:group {"className":"rivage-arrival-inside","layout":{"type":"default"}} -->
+<div class="wp-block-group rivage-arrival-inside">
+<!-- wp:image {"sizeSlug":"full","className":"rivage-arrival-inset"} -->
+<figure class="wp-block-image size-full rivage-arrival-inset"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/coastal-suite.png' ); ?>" alt="Soft linen and muted green accents in the coastal bedroom"/></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph {"className":"rivage-photo-caption"} -->
+<p class="rivage-photo-caption">Inside, a place to pause. Outside, the ocean.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"rivage-arrival-strip rivage-wrap","layout":{"type":"default"}} -->
+<div class="wp-block-group rivage-arrival-strip rivage-wrap">
+<!-- wp:paragraph {"className":"rivage-eyebrow"} -->
+<p class="rivage-eyebrow">A SMALL HOUSE OF HOSPITALITY</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph {"className":"rivage-arrival-details"} -->
+<p class="rivage-arrival-details">Garden terraces · Ocean balconies · Intimate gatherings</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
 <!-- wp:group {"className":"rivage-intro rivage-section rivage-wrap","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-intro rivage-section rivage-wrap"><!-- wp:group {"className":"rivage-intro-heading","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-intro-heading"><!-- wp:paragraph {"className":"rivage-eyebrow"} --><p class="rivage-eyebrow">WELCOME TO MAISON RIVAGE</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":2} --><h2 class="wp-block-heading ">An open door.<br>A slower morning.</h2><!-- /wp:heading -->
 </div><!-- /wp:group -->
@@ -48,7 +81,7 @@
 </div><!-- /wp:group -->
 </div><!-- /wp:group -->
 </div><!-- /wp:group -->
-<!-- wp:group {"className":"rivage-story rivage-section rivage-wrap","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-story rivage-section rivage-wrap"><!-- wp:image {"sizeSlug":"full","className":"rivage-story-image"} --><figure class="wp-block-image size-full rivage-story-image"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/hall.png' ); ?>" alt="Timber-framed reception and woven lounge seating opening onto the garden and ocean"/></figure><!-- /wp:image -->
+<!-- wp:group {"className":"rivage-story rivage-section rivage-wrap rivage-story-feature","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-story rivage-section rivage-wrap rivage-story-feature"><!-- wp:image {"sizeSlug":"full","className":"rivage-story-image"} --><figure class="wp-block-image size-full rivage-story-image"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/hall.png' ); ?>" alt="Timber-framed reception and woven lounge seating opening onto the garden and ocean"/></figure><!-- /wp:image -->
 <!-- wp:group {"className":"rivage-story-copy","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-story-copy"><!-- wp:paragraph {"className":"rivage-eyebrow"} --><p class="rivage-eyebrow">LIFE AT THE HOUSE</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":2} --><h2 class="wp-block-heading ">More than <br>a place to stay.</h2><!-- /wp:heading -->
 <!-- wp:paragraph --><p>A shared evening in the hall. A small exhibition to linger over. Music with the ocean just outside. Our gathering spaces make room for moments together.</p><!-- /wp:paragraph -->

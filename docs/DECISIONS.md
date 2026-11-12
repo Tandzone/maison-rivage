@@ -87,3 +87,7 @@ Implementation baseline: WordPress 7.1.4 on PHP 8.3/Apache, MariaDB 11.4, WP-CLI
 ## D14 — Retain standard WordPress
 
 After discussing Bedrock and hosting constraints, the user explicitly chose to continue with standard WordPress. No Bedrock migration. Hosting provider, budget commitment and production email provider remain undecided; investigate multi-site hosting for several portfolio demos before choosing an offer.
+
+## D15 — Strengthen the child theme identity
+
+The user requested a stronger visual identity so the website feels less like the parent theme, and approved a second design pass on the home and room pages. Keep Twenty Twenty-Five as the parent, native WordPress editing and the established photographic direction. The resulting visual proposal remains pending user review; no production publication or new room imagery is implied.

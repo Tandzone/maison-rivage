@@ -1,0 +1,141 @@
+/* Second visual pass: an intimate house with a recognizable coastal identity. */
+.rivage-wordmark { display:flex; align-items:center; gap:14px; }
+.rivage-wordmark .rivage-brand-mark { display:flex; margin:0; font-size:inherit; color:inherit; }
+.rivage-wordmark .rivage-brand-name { margin:0; font-family:Literata,Georgia,serif; font-size:1.8rem; font-weight:400; letter-spacing:-.07em; }
+.rivage-wordmark .rivage-brand-caption { margin-top:9px; font-family:Manrope,sans-serif; font-size:.47rem; font-weight:600; letter-spacing:.15em; }
+.rivage-header { border-bottom:1px solid var(--rivage-line); }
+.rivage-arrival { display:grid; grid-template-columns:1.16fr 1fr; gap:7%; align-items:start; padding-top:36px; padding-bottom:40px; }
+.rivage-arrival>* { margin:0!important; }
+.rivage-arrival-view { height:660px; overflow:hidden; }
+.rivage-arrival-view img { width:100%; height:100%; object-fit:cover; object-position:left center; }
+.rivage-arrival-copy { padding-top:34px; }
+.rivage-arrival-copy h1 { font-size:clamp(3.1rem,4.5vw,4.7rem); line-height:1.17; margin-bottom:26px; }
+.rivage-arrival-copy h1 em { font-weight:400; }
+.rivage-arrival-note { font-size:.85rem; line-height:1.9; }
+.rivage-arrival-copy>.rivage-text-link { margin-top:26px; }
+.rivage-arrival-inside { width:82%; margin-top:42px; margin-left:auto; }
+.rivage-arrival-inset { height:218px; margin:0; overflow:hidden; }
+.rivage-arrival-inset img { width:100%; height:100%; object-fit:cover; object-position:right center; }
+.rivage-photo-caption { font-size:.64rem; letter-spacing:.015em; color:var(--rivage-leaf); margin-top:13px!important; }
+.rivage-arrival-strip { display:flex; justify-content:space-between; gap:25px; align-items:center; border-top:1px solid var(--rivage-line); border-bottom:1px solid var(--rivage-line); padding-block:21px; }
+.rivage-arrival-strip p { margin:0!important; }
+.rivage-arrival-strip .rivage-eyebrow { font-size:.61rem; }
+.rivage-arrival-details { font-family:Literata,Georgia,serif; font-size:.85rem; font-style:italic; color:var(--rivage-ink); }
+.rivage-main .rivage-intro { padding-top:75px; }
+.rivage-room-grid { align-items:start; }
+.rivage-room-grid>.rivage-room-card:nth-child(2) { padding-top:64px; }
+.rivage-room-grid>.rivage-room-card:nth-child(3) { padding-top:26px; }
+.rivage-main .rivage-story-feature { background:var(--rivage-ink); color:white; border:0; margin-top:35px; padding:0; gap:0; grid-template-columns:1.15fr 1fr; }
+.rivage-story-feature .rivage-story-image img { height:535px; }
+.rivage-story-feature .rivage-story-copy { padding:48px; }
+.rivage-story-feature h2,.rivage-story-feature .rivage-eyebrow,.rivage-story-feature a { color:white; }
+.rivage-story-feature .rivage-text-link a { border-color:#ffffff66; }
+.rivage-rooms-heading { padding-bottom:55px; }
+.rivage-room-catalogue { padding-bottom:30px; }
+.rivage-room-entry { display:grid; grid-template-columns:1.3fr 1fr; gap:8%; align-items:center; padding-block:48px; border-top:1px solid var(--rivage-line); margin:0!important; }
+.rivage-room-entry>* { margin-block-start:0!important; }
+.rivage-catalogue-image { margin:0; height:440px; overflow:hidden; }
+.rivage-catalogue-image img { width:100%; height:100%; object-fit:cover; object-position:left; }
+.rivage-catalogue-image-2 img { object-position:right; }
+.rivage-room-entry:nth-child(2) { grid-template-columns:1fr 1.3fr; }
+.rivage-room-entry:nth-child(2) .rivage-catalogue-image { grid-column:2; grid-row:1; }
+.rivage-room-entry:nth-child(2) .rivage-catalogue-copy { grid-column:1; grid-row:1; }
+.rivage-catalogue-copy h2 { font-size:clamp(2.1rem,3vw,3rem); }
+.rivage-catalogue-copy>p:not(.rivage-eyebrow):not(.rivage-text-link) { font-size:.9rem; }
+.rivage-room-facts { margin:28px 0; border-top:1px solid var(--rivage-line); }
+.rivage-room-facts>div { display:flex; justify-content:space-between; gap:20px; border-bottom:1px solid var(--rivage-line); padding-block:13px; font-size:.75rem; }
+.rivage-room-facts dt { color:var(--rivage-leaf); }
+.rivage-room-facts dd { margin:0; color:var(--rivage-ink); font-weight:600; text-align:right; }
+.rivage-room-heading { padding-top:32px; padding-bottom:34px; }
+.rivage-room-heading>.rivage-text-link { font-size:.65rem; margin-bottom:35px!important; }
+.rivage-room-heading .rivage-eyebrow { margin-bottom:15px!important; }
+.rivage-room-heading h1 { margin-bottom:0; font-size:clamp(2.8rem,5vw,4.7rem); }
+.rivage-room-hero { display:grid; grid-template-columns:1.25fr 1fr; gap:8%; align-items:center; }
+.rivage-room-hero>* { margin:0!important; }
+.rivage-room-detail-view { height:590px; overflow:hidden; }
+.rivage-room-detail-view img { width:100%; height:100%; object-fit:cover; object-position:right; }
+.rivage-stay-summary h2 { font-size:clamp(2rem,3vw,3rem); }
+.rivage-stay-summary>p:not(.rivage-eyebrow) { font-size:.9rem; }
+.rivage-stay-summary .rivage-booking-note { font-size:.7rem!important; color:var(--rivage-leaf); margin-top:18px; }
+.rivage-room-story { display:grid; grid-template-columns:1fr 1.15fr; gap:10%; align-items:center; padding-block:80px; }
+.rivage-room-story>* { margin:0!important; }
+.rivage-room-story h2 { font-size:clamp(2.2rem,3.1vw,3rem); }
+.rivage-room-story-copy>p:not(.rivage-eyebrow) { font-size:.9rem; }
+.rivage-terrace-view { margin:0; height:380px; overflow:hidden; }
+.rivage-terrace-view img { width:100%; height:100%; object-fit:cover; object-position:left; }
+.rivage-room-closing { border-top:1px solid var(--rivage-line); text-align:center; }
+.rivage-room-closing>p:not(.rivage-text-link) { max-width:660px; margin-inline:auto; }
+.rivage-stay-summary .wp-block-buttons { margin-top:30px; }
+@media(max-width:1100px) {
+ .rivage-wordmark .rivage-brand-name { font-size:1.5rem; }
+ .rivage-wordmark .rivage-brand-caption { font-size:.4rem; }
+ .rivage-wordmark { gap:10px; }
+ .rivage-brand-mark svg { width:32px; }
+ .rivage-arrival { gap:5%; }
+ .rivage-arrival-view { height:610px; }
+ .rivage-arrival-copy h1 { font-size:3.3rem; }
+ .rivage-arrival-inset { height:200px; }
+ .rivage-story-feature .rivage-story-copy { padding:35px; }
+}
+@media(max-width:900px) {
+ .rivage-arrival-copy { padding-top:14px; }
+ .rivage-arrival-view { height:560px; }
+ .rivage-arrival-copy h1 { font-size:2.65rem; }
+ .rivage-arrival-inside { width:92%; margin-top:30px; }
+ .rivage-arrival-inset { height:180px; }
+ .rivage-arrival-details { font-size:.75rem; }
+ .rivage-arrival-strip .rivage-eyebrow { font-size:.53rem; }
+ .rivage-catalogue-image { height:370px; }
+ .rivage-room-detail-view { height:520px; }
+ .rivage-room-facts>div { flex-direction:column; gap:4px; }
+ .rivage-room-facts dd { text-align:left; }
+ .rivage-room-hero { gap:5%; }
+ .rivage-story-feature .rivage-story-copy { padding:26px; }
+ .rivage-story-feature .rivage-story-image img { height:480px; }
+}
+@media(max-width:600px) {
+ .rivage-header { padding-block:18px; }
+ .rivage-wordmark .rivage-brand-name { font-size:1.2rem; }
+ .rivage-wordmark .rivage-brand-caption { font-size:.33rem; margin-top:7px; letter-spacing:.1em; }
+ .rivage-brand-mark svg { width:27px; height:37px; }
+ .rivage-wordmark { gap:8px; }
+ .rivage-header-actions { gap:13px; }
+ .rivage-header .wp-block-button__link { font-size:.57rem; padding:11px 9px; }
+ .rivage-arrival { grid-template-columns:1fr; padding-top:0; padding-bottom:25px; gap:25px; }
+ .rivage-arrival-copy { grid-row:1; padding-top:32px; }
+ .rivage-arrival-copy h1 { font-size:2.9rem; }
+ .rivage-arrival-copy>.rivage-eyebrow { font-size:.57rem; }
+ .rivage-arrival-note { font-size:.8rem; }
+ .rivage-arrival-view { height:420px; }
+ .rivage-arrival-inside { display:none; }
+ .rivage-arrival-copy>.rivage-text-link { margin-top:20px; }
+ .rivage-arrival-strip { display:block; padding-block:18px; }
+ .rivage-arrival-details { margin-top:9px!important; font-size:.7rem; }
+ .rivage-main .rivage-intro { padding-top:45px; }
+ .rivage-room-grid>.rivage-room-card:nth-child(n) { padding-top:0; }
+ .rivage-main .rivage-story-feature { grid-template-columns:1fr; }
+ .rivage-story-feature .rivage-story-copy { padding:30px 24px 36px; }
+ .rivage-story-feature .rivage-story-image img { height:290px; }
+ .rivage-room-entry,.rivage-room-entry:nth-child(2) { grid-template-columns:1fr; gap:25px; padding-block:35px; }
+ .rivage-room-entry:nth-child(2) .rivage-catalogue-image,.rivage-room-entry:nth-child(2) .rivage-catalogue-copy { grid-column:auto; grid-row:auto; }
+ .rivage-catalogue-image { height:340px; }
+ .rivage-room-facts>div { flex-direction:row; gap:15px; }
+ .rivage-room-facts dd { text-align:right; }
+ .rivage-room-heading { padding-top:25px; }
+ .rivage-room-heading>.rivage-text-link { margin-bottom:30px!important; }
+ .rivage-room-heading h1 { font-size:2.6rem; }
+ .rivage-room-heading .rivage-eyebrow { font-size:.57rem; }
+ .rivage-room-hero { grid-template-columns:1fr; gap:32px; }
+ .rivage-room-detail-view { height:430px; }
+ .rivage-room-story { grid-template-columns:1fr; gap:30px; padding-block:45px; }
+ .rivage-room-story h2 br { display:none; }
+ .rivage-terrace-view { height:320px; }
+ .rivage-room-closing { text-align:left; }
+}
+@media(max-width:359px) {
+ .rivage-brand-mark { display:none!important; }
+ .rivage-header-actions { gap:10px; }
+ .rivage-arrival-copy h1 { font-size:2.5rem; }
+}
+/* Frame the bedroom half of the approved reference without changing the source image. */
+.rivage-arrival-inset img { width:200%; max-width:none; transform:translateX(-50%); }

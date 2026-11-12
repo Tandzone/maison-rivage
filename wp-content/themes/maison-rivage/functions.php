@@ -11,6 +11,12 @@ add_action(
             array(),
             (string) filemtime( get_stylesheet_directory() . '/assets/site.css' )
         );
+        wp_enqueue_style(
+            'maison-rivage-refinements',
+            get_stylesheet_directory_uri() . '/assets/refinements.css',
+            array( 'maison-rivage' ),
+            (string) filemtime( get_stylesheet_directory() . '/assets/refinements.css' )
+        );
     }
 );
 
