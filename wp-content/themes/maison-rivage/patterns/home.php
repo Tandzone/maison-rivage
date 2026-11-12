@@ -71,6 +71,7 @@
 <!-- wp:paragraph {"className":"rivage-text-link"} --><p class="rivage-text-link"><a href="<?php echo esc_url( home_url( '/events/' ) ); ?>">Discover experiences & events <span aria-hidden="true">↗</span></a></p><!-- /wp:paragraph -->
 </div><!-- /wp:group -->
 </div><!-- /wp:group -->
+<!-- wp:group {"className":"rivage-wrap rivage-section","layout":{"type":"default"}} --><div class="wp-block-group rivage-wrap rivage-section"><!-- wp:paragraph {"className":"rivage-eyebrow"} --><p class="rivage-eyebrow">ON THE CALENDAR</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class="wp-block-heading">Good company. Unhurried evenings.</h2><!-- /wp:heading --><!-- wp:shortcode -->[rivage_events limit="2"]<!-- /wp:shortcode --></div><!-- /wp:group -->
 <!-- wp:group {"className":"rivage-journal-teaser rivage-section rivage-wrap","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-journal-teaser rivage-section rivage-wrap"><!-- wp:paragraph {"className":"rivage-eyebrow"} --><p class="rivage-eyebrow">THE JOURNAL</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":2} --><h2 class="wp-block-heading ">Notes from the coast.</h2><!-- /wp:heading -->
 <!-- wp:paragraph --><p>Stories from the house, the garden and the shore.</p><!-- /wp:paragraph -->

@@ -106,6 +106,7 @@ function availability_screen() {
             $occupied = occupancy_conflict( $room->ID, $date->setTime( 14, 0 )->setTimezone( $utc )->format( 'Y-m-d H:i:s' ), $date->modify( '+1 day' )->setTime( 11, 0 )->setTimezone( $utc )->format( 'Y-m-d H:i:s' ) );
             echo '<td>';
             if ( $occupied && $occupied->booking_id ) { echo '<a href="' . esc_url( admin_url( 'admin.php?page=rivage-bookings&booking=' . $occupied->booking_id ) ) . '">Booked</a>'; }
+            elseif ( $occupied && 'event' === $occupied->source_type ) { echo '<a href="' . esc_url( event_schedule_url( $occupied->source_id ) ) . '">Event</a>'; }
             elseif ( $occupied ) { echo 'Occupied'; }
             else { echo 'active' === get_post_meta( $room->ID, '_rivage_status', true ) ? 'Open' : 'Out of service'; }
             echo '</td>';

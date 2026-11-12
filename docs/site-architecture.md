@@ -83,7 +83,7 @@ Journal remains under WordPress **Posts**; standard pages remain under **Pages**
 
 Public visitors browse events and view details; no event registration or automatic suite booking follows from viewing an event. Only public editorial information is published, never private guest or booking data.
 
-Administrators select Hall or a specific Rivage Suite. A room-occupying event must be checked against existing occupancy and block its defined time interval. Editing event dates or venue also needs conflict checks. Exact time buffers and stay/event interaction rules will be designed in chantier 6/7.
+Administrators select Hall or a specific Rivage Suite. A room-occupying event must be checked against existing occupancy and block its defined time interval. Editing event dates or venue also needs conflict checks. Implemented in chantier 7: one hour before and after suite events, shared transactional room locks and strict interval conflict checks. See `events-workflow.md`.
 
 ## Acceptance criteria for chantier 2
 

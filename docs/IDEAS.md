@@ -11,7 +11,7 @@ These items are proposals, not approved decisions. Move accepted choices to `DEC
 ## Proposed technical direction
 
 - Twenty Twenty-Five child theme and Docker Compose foundation are implemented; see D13 and README.
-- Room inventory, category metadata, media and three journal stories are seeded. Event records remain for chantier 7.
+- Room inventory, category metadata, media and three journal stories are seeded. Event stories, schedules and occupancy are implemented in chantier 7.
 - WordPress hosting with HTTPS, backups and migration support; provider TBD.
 
 ## Approved site structure
@@ -25,7 +25,7 @@ See `site-architecture.md` and D12 for approved pages, navigation and journeys.
 - One language at launch.
 - Room assignment and category availability display are implemented in chantier 6.
 - Notification triggers and 30-minute verification expiry are implemented; production SMTP provider remains undecided.
-- Define how timed events interact with overnight stays and check-in/check-out hours.
+- Timed events use the approved one-hour buffers and the same occupancy intervals as overnight stays; see D20 and `events-workflow.md`.
 
 ## Public demo and portfolio
 
@@ -33,4 +33,4 @@ See `site-architecture.md` and D12 for approved pages, navigation and journeys.
 - Submission rate limits, honeypot and idempotency are implemented; review public-demo abuse controls before deployment.
 - Consider resetting demo reservations regularly; mechanism and frequency not decided.
 - Desktop/mobile screenshots, short walkthrough and English case study.
-- Suggested seed content: 4 events and 5 journal articles.
+- Four events and five journal articles are seeded. Review dates before deployment; repeat setup deliberately preserves them.

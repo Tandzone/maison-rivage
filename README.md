@@ -2,7 +2,7 @@
 
 A fictional Madagascar-inspired boutique hotel website, built as a WordPress development portfolio project. Public content and administration labels are in English.
 
-**Current stage:** approved V2 interface with an operational room catalogue and editorial administration. The plugin manages category details, rates and six private physical rooms; the site renders those values dynamically. The reservation workflow is operational: availability search, email verification, manual room assignment, overlap prevention and guest notifications. See [booking workflow](docs/booking-workflow.md). See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md), [site architecture](docs/site-architecture.md) and [content model](docs/content-model.md).
+**Current stage:** approved V2 interface with an operational room catalogue and editorial administration. The plugin manages category details, rates and six private physical rooms; the site renders those values dynamically. Events and journal content are operational; see [events workflow](docs/events-workflow.md). The reservation workflow is operational: availability search, email verification, manual room assignment, overlap prevention and guest notifications. See [booking workflow](docs/booking-workflow.md). See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md), [site architecture](docs/site-architecture.md) and [content model](docs/content-model.md).
 
 The second visual pass adds a coastal wordmark, an asymmetric inside/outside opening, alternating room layouts and dedicated room facts. See [design direction](docs/design-direction.md) for the rationale. Images still use the approved atmosphere reference; category-specific galleries remain to be created.
 
@@ -33,7 +33,7 @@ The booking form is active as a fictional demonstration; the contact form remain
 
 Open **Maison Rivage → Room Types** in administration. Edit a category's page title, excerpt, Featured image and block content; use its **Maison Rivage — Room Type Details** meta box for guest limits, outdoor space and rate. In the block editor, expand the **Meta Boxes** pane if it is collapsed.
 
-**Maison Rivage → Rooms** manages the six private physical records and their category/operational status. Filters help inspect one category or rooms out of service. **Overview** shows current inventory counts. Hotel data management is restricted to administrators. Journal stories use ordinary **Posts**.
+**Maison Rivage → Rooms** manages the six private physical records and their category/operational status. Filters help inspect one category or rooms out of service. **Overview** shows current inventory counts. Hotel data management is restricted to administrators. Journal stories use ordinary **Posts**. **Events** provides native block editing; its **Schedule & Venue** panel opens the controlled schedule form. Publishing a story and reserving its venue are separate operations.
 
 The catalogue and room facts are dynamic shortcodes in native Shortcode blocks. Existing edited preview pages are preserved; insert the shortcodes listed in [content model](docs/content-model.md) manually if setup reports that it skipped a customized page. Prices are stored in integer cents, and the plugin has no dependency on the parent theme's business logic.
 
@@ -49,6 +49,8 @@ The catalogue and room facts are dynamic shortcodes in native Shortcode blocks. 
 ./bin/dev wp theme list
 ./bin/dev check               # Core checksums, active theme/plugin, PHP lint, SMTP smoke test
 ./bin/dev wp eval-file /workspace/scripts/tests/catalogue.php  # Local catalogue integration checks
+./bin/dev wp eval-file /workspace/scripts/tests/events.php     # Event occupancy and schedule checks
+python3 scripts/tests/event-booking-race.py                  # Concurrent booking/event conflict check
 ```
 
 Database and WordPress runtime files live in named Docker volumes. Source folders are mounted read-only into containers: edit them in this repository. WordPress core, parent theme and uploaded media are not committed. `docker compose down -v` **deletes local WordPress and database volumes**; use it only when deliberately discarding local data.
@@ -83,7 +85,7 @@ The smoke check sends a message titled **Maison Rivage local smoke test** to `gu
 
 ## Portfolio scope
 
-Implemented: six private physical rooms, three editable public category pages, nightly rates, guest limits, category/status administration filters, dynamic room collections and journal demo content. Also implemented: category-based requests, email verification, manual confirmation, physical room assignment, overlap prevention and notifications. Planned next: room-occupying events.
+Implemented: six private physical rooms, three editable public category pages, nightly rates, guest limits, category/status administration filters, dynamic room collections and journal demo content. Also implemented: category-based requests, email verification, manual confirmation, physical room assignment, overlap prevention and notifications. Events now support native block editing, transactional hall/suite scheduling, buffered occupation, cancellation and upcoming/past public listings. Four events and five journal stories are seeded. See [events workflow](docs/events-workflow.md).
 
 Hotel images are AI-generated concepts for a fictional property. Follow [the visual reference guide](docs/VISUAL-REFERENCE.md) and review individual drafts before publishing them.
 

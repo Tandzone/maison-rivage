@@ -109,3 +109,11 @@ The user approved arrival from 14:00 and departure before 11:00 (Madagascar); at
 ## D19 — Booking implementation defaults
 
 Implementation choices, distinct from user-approved business rules: stays of 1–30 nights with arrival within one year; transactional InnoDB occupancy with per-room locks; signed form idempotency keys; hashed verification tokens; transactional mail outbox and bounded retries. Local scheduler runs every minute. Unverified requests are removed after 24 hours, other booking records 90 days after departure. These demo defaults are disclosed in the site policies and can be revised before production. See `booking-workflow.md`.
+
+## D20 — Event occupation buffers
+
+The user approved one hour of preparation before and one hour of reset after a suite event. The selected physical Rivage Suite is blocked for this complete interval. Hall events do not block rooms. Events remain fictional listings without tickets or registration.
+
+## D21 — Event implementation choices
+
+Chantier 7 uses a public `rivage_event` post type for native block editing and an InnoDB schedule table for atomic operational updates. Editorial visibility and occupancy are separate; unpublishing does not cancel a scheduled operation. Cancellation releases inventory, trash/delete archives it, and restore requires explicit rescheduling. Revisions protect against stale schedule forms. Default event duration is positive and at most 24 hours, with past dates allowed for archives. Hall events do not require exclusive venue occupation in V1. These are implementation defaults, not additional user-approved hotel policies. See `events-workflow.md`.

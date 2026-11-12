@@ -1,6 +1,6 @@
 # Maison Rivage — Content and administration
 
-Room catalogue from chantier 5, extended with operational reservations in chantier 6; see [booking workflow](booking-workflow.md). Event management belongs to chantier 7.
+Room catalogue from chantier 5, extended with operational reservations in chantier 6; see [booking workflow](booking-workflow.md). Event management is implemented in chantier 7; see [events workflow](events-workflow.md).
 
 ## Editorial categories and private physical rooms
 
@@ -22,9 +22,9 @@ Physical rooms use the nonpublic `rivage_room` post type. They have internal ide
 | Ocean Balcony Room | Ocean 01, Ocean 02 | 2 | 2 / 2, subject to total capacity | 135 |
 | Rivage Suite | Suite 01, Suite 02 | 3 | 2 / 1 | 195 |
 
-Adult and child limits are separate maxima, not a sum that can exceed the total. Child-age rules and minimum adult requirements are not finalized; define them before implementing the booking flow. Private room-event eligibility is marked only on Rivage Suite.
+Adult and child limits are separate maxima, not a sum that can exceed the total. Bookings require at least one adult (12+); children are aged 0–11. Private room-event eligibility is marked only on Rivage Suite.
 
-Rates are stored as integer cents, parsed from decimal input without floating-point conversion. Blank means hidden, not zero/free. Negative, zero, excessive-precision or malformed amounts are rejected. Prices are demo rates; tax presentation and final booking-policy details remain to be specified before booking calculations.
+Rates are stored as integer cents, parsed from decimal input without floating-point conversion. Blank means hidden, not zero/free. Negative, zero, excessive-precision or malformed amounts are rejected. Demo totals are nightly rate × nights without supplements or payment; see `booking-workflow.md`.
 
 ## Administration
 

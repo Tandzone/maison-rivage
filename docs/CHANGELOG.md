@@ -47,3 +47,13 @@
 - Added local Docker scheduler for retries/cleanup without visitors; kept core updates deliberate for reproducibility.
 - Verified core checksums, PHP lint, SMTP, catalogue tests, booking integration tests, independent-process confirmation race and anonymous HTTP barriers. Browser exercised request → verification → confirmation → calendar → cancellation with Mailpit messages; cancellation released occupancy. Checked 390px and 320px and fixed narrow search-grid overflow. Repeat setup preserved existing content.
 - Event management remains chantier 7. Production SMTP/hosting remain chantier 9. No production website was deployed.
+
+## 2026-11-12 — Chantier 7: events and news
+
+- Recorded user approval for one-hour preparation/reset buffers around suite events; hall events do not block rooms.
+- Added public event posts with native block editing, images, excerpts and revisions, plus a separate administrator schedule form with nonce/capability and stale-revision checks.
+- Added transactional event schedules using shared room locks and occupancy. Conflicting venue/time edits roll back, cancellation releases inventory, and trash/restore cannot silently revive a room occupation.
+- Added upcoming/past paginated listings, public detail/status information, home teasers, calendar event links and an administrator Overview summary.
+- Seeded four events and two more journal stories (five total); added related stories. Reused existing concept imagery. Repeat setup preserved a hash of all editorial records, schedules and occupations.
+- Passed event integration tests and booking regression tests. Independent booking/event workers produced one success, one conflict and one occupation. Core checksums, PHP lint and local SMTP passed. Browser verified native editor, schedule save, calendar, public details, related stories, home teasers and 320px rendering without overflow.
+- Updated the workflow documentation and project memory. No production deployment; final review/polish is chantier 8.
