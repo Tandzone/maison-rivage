@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+case "${1:-help}" in
+  init)
+    python3 - <<'PY'
+import os
+from pathlib import Path
+import secrets
+p = Path('.env')
+if p.exists():
+    print('.env already exists; keeping existing configuration.')
+else:
+    data = Path('.env.example').read_text()
+    for placeholder in ('replace-with-local-random-password', 'replace-with-another-local-random-password'):
+        data = data.replace(placeholder, secrets.token_hex(24), 1)
+    data = data.replace('replace-with-local-random-password', secrets.token_hex(24))
+    fd = os.open(p, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    with os.fdopen(fd, 'w') as f:
+        f.write(data)
+    print('Created .env with local-only random passwords. Do not commit it.')
+PY
+    ;;
+  up) docker compose up -d --wait ;;
+  setup)
+    docker compose up -d --wait
+    docker compose run --rm --entrypoint sh cli /workspace/scripts/setup.sh
+    ;;
+  wp) shift; docker compose run --rm cli "$@" ;;
+  check) docker compose run --rm --entrypoint sh cli /workspace/scripts/check.sh ;;
+  down) docker compose down ;;
+  logs) docker compose logs --tail=100 wordpress db mailpit ;;
+  *)
+    echo 'Usage: ./bin/dev {init|up|setup|wp <args>|check|down|logs}'
+    ;;
+esac

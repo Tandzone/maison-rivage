@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.idea/
+.vscode/
+backups/
+vendor/
+node_modules/
+wp-content/uploads/
+wp-content/cache/
+wp-content/debug.log
