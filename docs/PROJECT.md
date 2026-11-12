@@ -45,7 +45,7 @@ Local WordPress is running at `http://localhost:8080`, administration at `/wp-ad
 
 ## Next — chantier 4: theme and interface
 
-Chantiers 1–3 are complete. Next: design and implement the theme's global styles, header/footer and public page layouts using the approved visual direction. Business features remain for chantiers 5–7. Public GitHub publication is authorized on `Tandzone/maison-rivage`; publication status will be recorded after the push.
+Chantiers 1–3 are complete. Next: design and implement the theme's global styles, header/footer and public page layouts using the approved visual direction. Business features remain for chantiers 5–7. Source is published at https://github.com/Tandzone/maison-rivage on `main`; this is source publication, not production website deployment.
 
 ## Memory map
 

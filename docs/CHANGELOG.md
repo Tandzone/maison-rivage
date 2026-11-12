@@ -23,3 +23,4 @@
 - Verified Compose configuration, running services, WordPress checksums, PHP syntax, front page and pretty permalinks, REST endpoint, administrator login, captured SMTP message and setup idempotency (existing page contents/count preserved).
 - Fixed local mail sender validation (`wordpress@localhost`) before PHPMailer initialization. No real recipient mail was sent.
 - Initialized Git on `main`. User authorized a public `Tandzone/maison-rivage` GitHub repository; publication follows source review. Chantier 3 complete; next: theme and interface.
+- Reviewed staged files for local passwords and ignored `.env`, then committed and pushed the project to the public repository https://github.com/Tandzone/maison-rivage (`main`). Runtime volumes and local credentials are not published.
