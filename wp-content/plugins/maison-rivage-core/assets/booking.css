@@ -1,0 +1,32 @@
+.rivage-booking-flow { max-width:1000px; margin-inline:auto; }
+.rivage-search-grid { display:grid; grid-template-columns:1fr 1fr .7fr .7fr auto; gap:16px; align-items:end; }
+.rivage-booking-flow label,.rivage-search-form label,.rivage-resend label { display:block; font-size:.8rem; font-weight:600; }
+.rivage-booking-flow input:not([type=radio]):not([type=checkbox]),.rivage-booking-flow textarea,.rivage-search-form input { width:100%; min-width:0; padding:12px; margin-top:8px; background:white; color:#183e35; border:1px solid #bcc8bf; border-radius:0; font:inherit; }
+.rivage-search-form { padding:26px; background:#e7e1d4; margin-bottom:35px; }
+.rivage-search-form label span { font-size:.65rem; font-weight:400; }
+.rivage-booking-flow h2 { font-size:2rem; margin-top:35px; }
+.rivage-demo-note,.rivage-request-form>p { font-size:.8rem; color:#526053; }
+.rivage-booking-flow button,.rivage-search-form button { cursor:pointer; border:0; white-space:nowrap; padding:15px 20px; font:600 .78rem Manrope,sans-serif; background:#183e35; color:white; }
+.rivage-booking-flow button:hover,.rivage-search-form button:hover { background:#285446; }
+.rivage-room-options { border:0; padding:0; margin:25px 0; }
+.rivage-room-options legend { font-size:.8rem; margin-bottom:12px; }
+.rivage-room-option { display:flex!important; gap:16px; align-items:center; border:1px solid #bcc8bf; padding:22px; margin-bottom:12px; background:white; cursor:pointer; }
+.rivage-room-option:has(input:checked) { border:2px solid #183e35; padding:21px; }
+.rivage-room-option input { accent-color:#183e35; width:20px; height:20px; }
+.rivage-room-option strong { display:block; font:400 1.35rem Literata,Georgia,serif; margin-bottom:8px; }
+.rivage-room-option span span { font-size:.8rem; font-weight:400; }
+.rivage-guest-fields { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:24px; }
+.rivage-ack { display:flex!important; gap:12px; align-items:flex-start; margin-block:24px; font-weight:400!important; }
+.rivage-ack input { margin-top:5px; accent-color:#183e35; }
+.rivage-honeypot { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+.rivage-resend { margin-top:40px; padding-top:20px; border-top:1px solid #bcc8bf; }
+.rivage-resend summary { cursor:pointer; font-size:.85rem; }
+.rivage-resend form label,.rivage-booking-state form label { margin-block:16px; }
+.rivage-booking-state input { display:block; padding:12px; width:100%; font:inherit; border:1px solid #bcc8bf; margin-top:8px; }
+.rivage-booking-state button { cursor:pointer; border:0; padding:15px 22px; background:#183e35; color:white; }
+.rivage-home-search { margin-block:32px!important; }
+@media(max-width:800px) { .rivage-search-grid { grid-template-columns:minmax(0,1fr) minmax(0,1fr); } .rivage-search-grid label { min-width:0; } .rivage-search-grid button { grid-column:1/-1; } }
+@media(max-width:480px) { .rivage-search-form { padding:18px; } .rivage-search-grid { gap:12px; } .rivage-guest-fields { grid-template-columns:1fr; gap:18px; } .rivage-booking-flow h2 { font-size:1.7rem; } }
+.rivage-booking-page .rivage-page-intro { padding-bottom:0; }
+.rivage-booking-page .rivage-section { padding-top:35px; }
+.rivage-booking-page .rivage-booking-state { margin-top:30px; }

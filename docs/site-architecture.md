@@ -49,8 +49,8 @@ Six physical rooms do not create six near-identical public pages: use three cate
 - No availability: preserve search values and offer changing dates or category.
 - Availability changed since search: explain and offer another search; recheck again at confirmation regardless of earlier results.
 - Submitting, successful submission and recoverable submission failure; prevent accidental duplicate requests.
-- Verification link valid, expired, invalid or already used; define a safe recovery/resend flow in chantier 6.
-- Pending review, confirmed, declined and cancelled outcomes. Final internal status model belongs to chantier 6.
+- Verification link valid, expired, invalid or already used; implemented with 30-minute expiry and token rotation on resend in chantier 6.
+- Pending review, confirmed, declined and cancelled outcomes. Implemented statuses: unverified, pending, confirmed, declined, cancelled. See `booking-workflow.md`.
 
 ## Administration architecture
 

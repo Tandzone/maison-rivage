@@ -48,6 +48,7 @@
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
+<!-- wp:group {"className":"rivage-wrap rivage-home-search","layout":{"type":"default"}} --><div class="wp-block-group rivage-wrap rivage-home-search"><!-- wp:shortcode -->[rivage_search]<!-- /wp:shortcode --></div><!-- /wp:group -->
 <!-- wp:group {"className":"rivage-intro rivage-section rivage-wrap","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-intro rivage-section rivage-wrap"><!-- wp:group {"className":"rivage-intro-heading","tagName":"div","layout":{"type":"default"}} --><div class="wp-block-group rivage-intro-heading"><!-- wp:paragraph {"className":"rivage-eyebrow"} --><p class="rivage-eyebrow">WELCOME TO MAISON RIVAGE</p><!-- /wp:paragraph -->
 <!-- wp:heading {"level":2} --><h2 class="wp-block-heading ">An open door.<br>A slower morning.</h2><!-- /wp:heading -->
 </div><!-- /wp:group -->

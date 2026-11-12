@@ -27,7 +27,8 @@ function overview_screen() {
     <a class="button" href="<?php echo esc_url( admin_url( 'edit.php?post_type=rivage_room' ) ); ?>">Manage Rooms</a></p>
     <h2>How the content is organized</h2><p>Room types are public pages: edit their photographs, description and layout with the block editor. Hotel details below the editor control their guest limits, outdoor space and nightly rate.</p>
     <p>Physical rooms are private inventory records. Their identifiers and operational status are not published on the website.</p>
-    <p>Reservation management and the availability calendar are not available yet. An active room is operational; this does not mean it is available for every date.</p></div>
+    <p><a href="<?php echo esc_url( admin_url( 'admin.php?page=rivage-bookings' ) ); ?>">Review reservation requests</a> · <a href="<?php echo esc_url( admin_url( 'admin.php?page=rivage-availability' ) ); ?>">View room availability</a> · <a href="<?php echo esc_url( admin_url( 'admin.php?page=rivage-notifications' ) ); ?>">Email notifications</a></p>
+    <p>An active room is operational; this does not mean it is available for every date.</p></div>
     <?php
 }
 

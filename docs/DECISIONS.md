@@ -101,3 +101,11 @@ The user approved EUR nightly rates: Garden Room 95 €, Ocean Balcony Room 135 
 ## D17 — Content implementation
 
 Implementation choice for chantier 5: keep room types as the existing public category Pages (with hotel metadata) and use a nonpublic `rivage_room` post type for physical inventory. This preserves URLs and block editing without duplicate category records. Plugin shortcodes render collections and facts from centralized data. Hotel field changes require administrative capabilities and nonces. Journal uses standard WordPress Posts. Booking and event operations remain for chantiers 6–7.
+
+## D18 — Approved reservation rules
+
+The user approved arrival from 14:00 and departure before 11:00 (Madagascar); at least one adult, adults aged 12+, children aged 0–11; category guest limits; a 30-minute email verification link with resend; pending requests never hold inventory; manual confirmation rechecks availability. Demo totals are nightly rate × nights with no supplements or payment. Admin cancellation releases dates. Verification emails go to guests, verified requests notify the admin, and confirmation/decline/cancellation notify guests. Conflicting confirmations are blocked and alert the admin.
+
+## D19 — Booking implementation defaults
+
+Implementation choices, distinct from user-approved business rules: stays of 1–30 nights with arrival within one year; transactional InnoDB occupancy with per-room locks; signed form idempotency keys; hashed verification tokens; transactional mail outbox and bounded retries. Local scheduler runs every minute. Unverified requests are removed after 24 hours, other booking records 90 days after departure. These demo defaults are disclosed in the site policies and can be revised before production. See `booking-workflow.md`.

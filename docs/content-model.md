@@ -1,6 +1,6 @@
 # Maison Rivage — Content and administration
 
-Chantier 5 implementation. Reservation operations belong to chantier 6; event management belongs to chantier 7.
+Room catalogue from chantier 5, extended with operational reservations in chantier 6; see [booking workflow](booking-workflow.md). Event management belongs to chantier 7.
 
 ## Editorial categories and private physical rooms
 

@@ -11,6 +11,8 @@ x-wp-environment: &wp-environment
     define('WP_DEBUG_LOG', true);
     define('WP_DEBUG_DISPLAY', false);
     define('DISALLOW_FILE_EDIT', true);
+    define('DISABLE_WP_CRON', true);
+    define('AUTOMATIC_UPDATER_DISABLED', true);
   RIVAGE_SMTP_HOST: mailpit
   RIVAGE_SMTP_PORT: "1025"
 
@@ -73,6 +75,20 @@ services:
     image: axllent/mailpit:v1.33.1@sha256:aef2aacc11f075ec0fb6874275ee4a421e688e11a96ebb296134d1735c7761ce
     ports:
       - "127.0.0.1:${MAILPIT_PORT:-8025}:8025"
+
+  scheduler:
+    image: wordpress:cli-php8.3@sha256:a4fff017eb08c03187e90fe52d4bff8d3a4d4a5103de05829a6e747c4ca3056e
+    user: "33:33"
+    entrypoint: [sh, -c]
+    command:
+      - 'while true; do if wp core is-installed 2>/dev/null; then wp cron event run --due-now --quiet; fi; sleep 60; done'
+    environment:
+      <<: *wp-environment
+      WP_CLI_CACHE_DIR: /tmp/wp-cli-cache
+    volumes: *wp-volumes
+    depends_on:
+      wordpress:
+        condition: service_healthy
 
 volumes:
   database:

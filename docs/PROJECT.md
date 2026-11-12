@@ -32,7 +32,7 @@ See [decisions](DECISIONS.md) for reservation rules and [ideas](IDEAS.md) for pr
 | 3 | Local development environment | Complete — running and verified |
 | 4 | Theme and interface | Complete — V2 visual direction approved |
 | 5 | Content and administration | Complete — room catalogue and journal administration |
-| 6 | Reservation workflow | Not started |
+| 6 | Reservation workflow | Complete — verified locally |
 | 7 | Events and news | Not started |
 | 8 | Verification and polish | Not started |
 | 9 | Deployment | Not started |
@@ -42,11 +42,11 @@ The outline is a planning reference, not an implementation approval for every pr
 
 ## Current state
 
-Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. V2 design is approved. The plugin now manages three category Pages, six private physical rooms, guest limits and approved EUR rates (95/135/195). Room collections/facts are dynamic, three journal stories and media are seeded, and native administration has inventory filters and safe field validation. Booking and contact forms remain inactive; reservation tools and event administration come in chantiers 6–7. Category-specific imagery remains for final content/polish. See `content-model.md` and README.
+Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. V2 design is approved. The plugin now manages three category Pages, six private physical rooms, guest limits and approved EUR rates (95/135/195). Room collections/facts are dynamic, three journal stories and media are seeded, and native administration has inventory filters and safe field validation. Reservations now support availability search, email verification, manual confirmation/assignment, conflict prevention, cancellation and email notifications. Contact remains inactive. All mail is captured locally in Mailpit. Category-specific imagery remains for polish. See `booking-workflow.md`.
 
-## Next — chantier 6: reservation workflow
+## Next — chantier 7: events and news
 
-Chantiers 1–5 are complete for their current boundaries. Before the booking implementation, settle arrival/departure hours, child-age/minimum-adult rules, email verification expiry and guest/admin notification triggers. Then implement availability, requests and administrative room assignment with conflict prevention. Event management stays in chantier 7; final imagery/polish remains tracked. Repository: https://github.com/Tandzone/maison-rivage (`main`); source publication is not production website deployment.
+Implement event administration and public listings, including hall events and room occupancy. Reuse the booking room lock protocol when adding event occupancy. Chantiers 1–6 are complete within their current scope. Production hosting and SMTP remain for chantier 9. Repository: https://github.com/Tandzone/maison-rivage (`main`); source publication is not production website deployment.
 
 ## Memory map
 

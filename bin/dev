@@ -30,7 +30,7 @@ PY
   wp) shift; docker compose run --rm cli "$@" ;;
   check) docker compose run --rm --entrypoint sh cli /workspace/scripts/check.sh ;;
   down) docker compose down ;;
-  logs) docker compose logs --tail=100 wordpress db mailpit ;;
+  logs) docker compose logs --tail=100 wordpress db mailpit scheduler ;;
   *)
     echo 'Usage: ./bin/dev {init|up|setup|wp <args>|check|down|logs}'
     ;;

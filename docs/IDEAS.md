@@ -23,14 +23,14 @@ See `site-architecture.md` and D12 for approved pages, navigation and journeys.
 - Simple category rates are approved at 95/135/195 EUR; seasonal rates and promotions are deferred. Event listings remain without ticketing/registration.
 - No external booking-platform synchronization.
 - One language at launch.
-- Define room assignment interface and category availability display; category-based requests and assignment on confirmation are approved.
-- Admin and email notification channels are approved. Define recipients, triggers and email verification expiration.
+- Room assignment and category availability display are implemented in chantier 6.
+- Notification triggers and 30-minute verification expiry are implemented; production SMTP provider remains undecided.
 - Define how timed events interact with overnight stays and check-in/check-out hours.
 
 ## Public demo and portfolio
 
 - Clear fictional-project and generated-imagery disclosure.
-- Protection against automated and repeated submissions.
+- Submission rate limits, honeypot and idempotency are implemented; review public-demo abuse controls before deployment.
 - Consider resetting demo reservations regularly; mechanism and frequency not decided.
 - Desktop/mobile screenshots, short walkthrough and English case study.
 - Suggested seed content: 4 events and 5 journal articles.

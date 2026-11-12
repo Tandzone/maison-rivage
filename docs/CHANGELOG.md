@@ -37,3 +37,13 @@
 - Implemented chantier 5: editable category Pages with hotel metadata, six nonpublic physical-room records, administrative overview/category table/filters, validated and authorized saves, integer-cent rates and dynamic collection/facts shortcodes. Imported media and seeded three fictional journal articles with recent-post display.
 - Verified price changes through the actual WordPress editor reflected on the public page, then restored the approved 135 EUR rate. Verified category filter returns two rooms, inventory is not exposed via public room IDs or REST, malformed input/unauthorized saves are rejected and reseeding preserves existing records without duplication. Fixed first-run journal permalink initialization. Next: reservation workflow decisions and chantier 6.
 - Final frontend verification: all homepage links and journal article URLs respond, homepage shows the three approved rates and three journal stories, and the dynamic layout has no horizontal overflow at mobile width. Admin category table/filtered inventory captures saved in ignored `artifacts/previews/`. Room/category integration checks, PHP/core integrity and SMTP checks passed.
+
+## 2026-11-12 — Chantier 6: reservation workflow
+
+- Added category availability search, server-side pricing, verified requests and admin room assignment/confirmation, decline and cancellation.
+- Added InnoDB occupancy and shared room locks, preserving pending requests without holding inventory and preventing overlapping confirmations under concurrent workers.
+- Added private booking list, 14-night inventory calendar, overlapping-request warnings and email outbox monitoring/retry. Conflicts show an immediate administrator notice.
+- Added token expiry/resend, signed submission idempotency, rate limits, privacy headers and retention cleanup. Updated public booking/privacy policies with demo limits.
+- Added local Docker scheduler for retries/cleanup without visitors; kept core updates deliberate for reproducibility.
+- Verified core checksums, PHP lint, SMTP, catalogue tests, booking integration tests, independent-process confirmation race and anonymous HTTP barriers. Browser exercised request → verification → confirmation → calendar → cancellation with Mailpit messages; cancellation released occupancy. Checked 390px and 320px and fixed narrow search-grid overflow. Repeat setup preserved existing content.
+- Event management remains chantier 7. Production SMTP/hosting remain chantier 9. No production website was deployed.
