@@ -154,6 +154,7 @@ add_shortcode( 'rivage_received', __NAMESPACE__ . '\\received_shortcode' );
 add_shortcode( 'rivage_verify', __NAMESPACE__ . '\\verify_shortcode' );
 add_action( 'wp_enqueue_scripts', static function () {
     if ( is_front_page() || is_page() ) {
+        wp_enqueue_script( 'rivage-booking-picker', plugins_url( 'assets/booking.js', dirname( __DIR__ ) . '/maison-rivage-core.php' ), array(), (string) filemtime( dirname( __DIR__ ) . '/assets/booking.js' ), true );
         wp_enqueue_style( 'rivage-booking', plugins_url( 'assets/booking.css', dirname( __DIR__ ) . '/maison-rivage-core.php' ), array(), '0.3.0' );
     }
 } );

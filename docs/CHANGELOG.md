@@ -77,3 +77,8 @@
 - Confirmed screenshot failure: the HTTPS preview page referenced loopback CSS/images/fonts, causing connection-refused and mixed-content errors remotely.
 - Added explicit preview-origin configuration before WordPress bootstrap, exact-host HTTPS detection and local-only content URL normalization. Preserved localhost access and database content; no global URL replacement.
 - Enabled the existing private Serve origin only in ignored `.env`, recreated local services and verified both origins. Added a reusable HTTPS preview check covering pages/assets and CSS dependencies. Tailscale network access and Funnel settings were not changed.
+
+## 2026-11-13 — Open date calendars from the whole field
+
+- User requested date selection instead of typing. Retained native date inputs and added progressive `showPicker()` activation when clicking anywhere in the search date fields; the calendar icon and keyboard entry remain available when unsupported or blocked.
+- Verified JavaScript/PHP syntax and script delivery on home/booking through localhost and the private HTTPS preview. Native popup interaction still belongs to the pending browser review.

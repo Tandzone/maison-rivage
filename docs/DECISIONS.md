@@ -129,3 +129,7 @@ On 2026-11-13 the user explicitly approved three distinct visuals for Garden Roo
 ## D24 — Private Tailscale preview URL correction
 
 The user reported a remotely viewed page with CSS/images/fonts still pointing to localhost. Inspection confirmed an existing private Tailscale Serve reverse proxy to loopback port 8080. The local `.env` now selects its HTTPS origin; source configuration uses an empty optional `RIVAGE_PREVIEW_URL`. WordPress home/site URLs and HTTPS detection change only for the explicitly configured preview Host, and saved content URLs are normalized at rendering time. Database URLs remain local. This fixes the existing private preview; it does not enable Funnel, change Tailscale access rules or deploy production hosting.
+
+## D25 — Native booking date selection
+
+The user requested a date selector. Keep native date controls and enhance whole-field clicks with feature-detected `showPicker()`; preserve keyboard entry and the existing calendar icon as fallbacks. Avoid adding a calendar library for this interaction.
