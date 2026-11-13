@@ -421,7 +421,7 @@ body {
   text-underline-offset:6px;
 }
 :where(a,button,input,select,textarea):focus-visible {
-  outline:3px solid #a77d32;
+  outline:3px solid #183e35;
   outline-offset:5px;
 }
 .wp-block-navigation__responsive-container.is-menu-open {
@@ -688,3 +688,5 @@ body {
     font-size:1.7rem;
   }
 }
+
+:where(.wp-element-button,.rivage-header-booking):focus-visible { outline:3px solid #a77d32; box-shadow:0 0 0 2px #f8f7f2; }

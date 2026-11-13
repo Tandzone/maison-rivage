@@ -11,7 +11,7 @@ function verification_body( $reference, $token ) {
 function queue_booking_mail( $id, $event, $recipient, $subject, $body ) {
     global $wpdb;
     return false !== $wpdb->insert( booking_table( 'mail' ), array( 'booking_id' => $id, 'event_key' => $id . ':' . $event,
-        'recipient' => $recipient, 'subject' => $subject, 'body' => $body, 'status' => 'queued', 'next_attempt' => time() ) );
+        'recipient' => $recipient, 'subject' => $subject, 'body' => $body, 'status' => 'queued', 'next_attempt' => time(), 'created_at' => time() ) );
 }
 function dispatch_booking_mail() {
     global $wpdb;

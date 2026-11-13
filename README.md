@@ -2,7 +2,9 @@
 
 A fictional Madagascar-inspired boutique hotel website, built as a WordPress development portfolio project. Public content and administration labels are in English.
 
-**Current stage:** approved V2 interface with an operational room catalogue and editorial administration. The plugin manages category details, rates and six private physical rooms; the site renders those values dynamically. Events and journal content are operational; see [events workflow](docs/events-workflow.md). The reservation workflow is operational: availability search, email verification, manual room assignment, overlap prevention and guest notifications. See [booking workflow](docs/booking-workflow.md). See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md), [site architecture](docs/site-architecture.md) and [content model](docs/content-model.md).
+**Current stage:** chantier 8 functional review passed; final browser/keyboard review is pending because browser access was unavailable. See [quality review](docs/quality-review.md).
+
+ approved V2 interface with an operational room catalogue and editorial administration. The plugin manages category details, rates and six private physical rooms; the site renders those values dynamically. Events and journal content are operational; see [events workflow](docs/events-workflow.md). The reservation workflow is operational: availability search, email verification, manual room assignment, overlap prevention and guest notifications. See [booking workflow](docs/booking-workflow.md). See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md), [site architecture](docs/site-architecture.md) and [content model](docs/content-model.md).
 
 The second visual pass adds a coastal wordmark, an asymmetric inside/outside opening, alternating room layouts and dedicated room facts. See [design direction](docs/design-direction.md) for the rationale. Images still use the approved atmosphere reference; category-specific galleries remain to be created.
 
@@ -27,7 +29,7 @@ The first design seeds only untouched starter pages (plus the original untouched
 
 The V2 design migration upgrades only the five untouched V1 home/room previews, checking content hashes normalized for the site URL. It preserves edited pages and stores the previous preview in `_rivage_design_v1_content` post metadata. Rerunning setup does not overwrite V2 editor content.
 
-The booking form is active as a fictional demonstration; the contact form remains inactive. Generated hall/event imagery and category illustrations are local previews, with category-specific galleries still to be prepared. User-approved fictional rates are 95 / 135 / 195 EUR per room, per night.
+The booking form is active as a fictional demonstration; the contact form queues demo messages to the administrator via the same outbox. Generated hall/event imagery and category illustrations are local previews, with category-specific galleries still to be prepared. User-approved fictional rates are 95 / 135 / 195 EUR per room, per night.
 
 ## Editing hotel content
 
@@ -50,6 +52,8 @@ The catalogue and room facts are dynamic shortcodes in native Shortcode blocks. 
 ./bin/dev check               # Core checksums, active theme/plugin, PHP lint, SMTP smoke test
 ./bin/dev wp eval-file /workspace/scripts/tests/catalogue.php  # Local catalogue integration checks
 ./bin/dev wp eval-file /workspace/scripts/tests/events.php     # Event occupancy and schedule checks
+./bin/dev wp eval-file /workspace/scripts/tests/contact.php    # Contact validation and delivery retry
+python3 scripts/tests/site-http.py                          # Read-only public HTTP crawl
 python3 scripts/tests/event-booking-race.py                  # Concurrent booking/event conflict check
 ```
 
@@ -98,3 +102,5 @@ Commit source, documentation and reference assets. Never commit `.env`, credenti
 - [WordPress Docker image](https://github.com/docker-library/docs/tree/master/wordpress)
 - [WordPress child themes](https://developer.wordpress.org/themes/advanced-topics/child-themes/)
 - [Mailpit](https://mailpit.axllent.org/)
+
+Contact messages do not create reservations. Their bodies are cleared after SMTP acceptance and contact outbox rows expire after 24 hours. Local captured copies remain in Mailpit until cleared/reset. Original hotel PNGs are preserved; WebP derivatives provide lighter frontend delivery. No new category imagery has been approved.

@@ -57,3 +57,11 @@
 - Seeded four events and two more journal stories (five total); added related stories. Reused existing concept imagery. Repeat setup preserved a hash of all editorial records, schedules and occupations.
 - Passed event integration tests and booking regression tests. Independent booking/event workers produced one success, one conflict and one occupation. Core checksums, PHP lint and local SMTP passed. Browser verified native editor, schedule save, calendar, public details, related stories, home teasers and 320px rendering without overflow.
 - Updated the workflow documentation and project memory. No production deployment; final review/polish is chantier 8.
+
+## 2026-11-13 — Chantier 8 functional review and polish (in progress)
+
+- Added contact validation, nonce/honeypot/rate limits, transactional-outbox reuse, idempotent queueing, failure retry and 24-hour retention. Fixed WordPress query-variable collision exposed by the HTTP contact test.
+- Added immutable outbox creation times (schema version 2) to make retention independent of retry scheduling. Updated truthful contact success/privacy wording and local scheduler description.
+- Added non-destructive WebP derivatives (90% reduction across the three full-size image files), responsive seeded-media delivery and clearer focus outlines.
+- Passed catalogue, booking, event and contact suites, both occupancy races, anonymous booking checks and contact HTTP/SMTP. Public crawl verifies 21 pages and local image sources; repeat setup preserves page/schedule snapshots.
+- Browser host was unavailable on inventory and direct-open attempts. Final visual, responsive and keyboard checks remain open, as does the optional category-imagery choice. No new screenshot, accessibility certification or page-speed score is claimed. See `quality-review.md`.

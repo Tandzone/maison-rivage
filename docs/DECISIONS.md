@@ -117,3 +117,7 @@ The user approved one hour of preparation before and one hour of reset after a s
 ## D21 — Event implementation choices
 
 Chantier 7 uses a public `rivage_event` post type for native block editing and an InnoDB schedule table for atomic operational updates. Editorial visibility and occupancy are separate; unpublishing does not cancel a scheduled operation. Cancellation releases inventory, trash/delete archives it, and restore requires explicit rescheduling. Revisions protect against stale schedule forms. Default event duration is positive and at most 24 hours, with past dates allowed for archives. Hall events do not require exclusive venue occupation in V1. These are implementation defaults, not additional user-approved hotel policies. See `events-workflow.md`.
+
+## D22 — Contact and polish implementation defaults
+
+Chantier 8 implements the approved contact page with administrator-only mail delivery through the existing outbox, without a guest auto-reply or booking. Implementation defaults: signed submission idempotency, five attempts per IP/hour, name/email/message validation and 24-hour contact-outbox retention. Local messages remain in Mailpit, whose copies have their own lifecycle. These are implementation choices, not new user-approved operational policies. Existing visuals receive WebP encoding derivatives; the optional choice of new category imagery remains unapproved. Browser review is pending due to unavailable browser access; see `quality-review.md`.

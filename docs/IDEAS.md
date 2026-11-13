@@ -4,6 +4,8 @@ These items are proposals, not approved decisions. Move accepted choices to `DEC
 
 ## Editorial and imagery follow-up
 
+- Pending optional user choice (chantier 8): three distinct reference-consistent garden/balcony/suite visuals, or retain current imagery.
+
 - Maison Rivage's story and target guest profile; the hotel name is approved.
 - Review generated hall/event drafts before publication; see `VISUAL-REFERENCE.md`.
 - Use licensed real destination photographs if portraying specific real places.
@@ -11,7 +13,7 @@ These items are proposals, not approved decisions. Move accepted choices to `DEC
 ## Proposed technical direction
 
 - Twenty Twenty-Five child theme and Docker Compose foundation are implemented; see D13 and README.
-- Room inventory, category metadata, media and three journal stories are seeded. Event stories, schedules and occupancy are implemented in chantier 7.
+- Room inventory, category metadata, media and five journal stories are seeded. Event stories, schedules and occupancy are implemented in chantier 7.
 - WordPress hosting with HTTPS, backups and migration support; provider TBD.
 
 ## Approved site structure

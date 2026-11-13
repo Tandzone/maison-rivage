@@ -14,3 +14,5 @@
 <!-- wp:paragraph --><p>The coastline and hotel imagery are imagined. We do not provide directions or a map to a real property.</p><!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"rivage-text-link"} --><p class="rivage-text-link"><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Explore the house <span aria-hidden="true">↗</span></a></p><!-- /wp:paragraph -->
 </div><!-- /wp:group -->
+
+<!-- wp:group {"className":"rivage-wrap rivage-section","layout":{"type":"default"}} --><div class="wp-block-group rivage-wrap rivage-section"><!-- wp:shortcode -->[rivage_contact]<!-- /wp:shortcode --></div><!-- /wp:group -->

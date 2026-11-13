@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) || exit;
 
 function booking_table( $suffix = 'bookings' ) { global $wpdb; return $wpdb->prefix . 'rivage_' . $suffix; }
 function booking_schema() {
-    if ( '1' === get_option( 'rivage_booking_schema' ) ) { return; }
+    if ( '2' === get_option( 'rivage_booking_schema' ) ) { return; }
     global $wpdb;
     require_once ABSPATH . 'wp-admin/includes/upgrade.php';
     $charset = $wpdb->get_charset_collate();
@@ -56,6 +56,7 @@ body longtext NOT NULL,
 status varchar(20) NOT NULL DEFAULT 'queued',
 attempts smallint(5) unsigned NOT NULL DEFAULT 0,
 next_attempt bigint(20) unsigned NOT NULL DEFAULT 0,
+created_at bigint(20) unsigned NOT NULL DEFAULT 0,
 PRIMARY KEY  (id),
 UNIQUE KEY event_key (event_key),
 KEY status (status)",
@@ -69,7 +70,8 @@ KEY expires (expires)",
         dbDelta( 'CREATE TABLE ' . booking_table( $name ) . " (\n" . $columns . "\n) ENGINE=InnoDB $charset;" );
         if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( booking_table( $name ) ) ) ) !== booking_table( $name ) ) { return; }
     }
-    update_option( 'rivage_booking_schema', '1', false );
+    $wpdb->query( $wpdb->prepare( 'UPDATE ' . booking_table( 'mail' ) . ' SET created_at=%d WHERE created_at=0', time() ) );
+    update_option( 'rivage_booking_schema', '2', false );
 }
 function booking_get( $id, $lock = false ) {
     global $wpdb;

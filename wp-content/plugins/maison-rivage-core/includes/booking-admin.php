@@ -122,7 +122,7 @@ function notifications_screen() {
     echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">'; wp_nonce_field( 'rivage_retry_mail' );
     echo '<input type="hidden" name="action" value="rivage_retry_mail"><button class="button">Retry Pending / Failed Emails</button></form><table class="widefat striped" style="margin-top:20px"><thead><tr><th>Request</th><th>Subject</th><th>Recipient</th><th>Status</th><th>Attempts</th></tr></thead><tbody>';
     foreach ( $wpdb->get_results( 'SELECT * FROM ' . booking_table( 'mail' ) . ' ORDER BY id DESC LIMIT 100' ) as $mail ) {
-        echo '<tr><td><a href="' . esc_url( admin_url( 'admin.php?page=rivage-bookings&booking=' . $mail->booking_id ) ) . '">#' . (int) $mail->booking_id . '</a></td><td>' . esc_html( $mail->subject ) . '</td><td>' . esc_html( $mail->recipient ) . '</td><td>' . esc_html( $mail->status ) . '</td><td>' . (int) $mail->attempts . '</td></tr>';
+        echo '<tr><td>' . ( $mail->booking_id ? '<a href="' . esc_url( admin_url( 'admin.php?page=rivage-bookings&booking=' . $mail->booking_id ) ) . '">#' . (int) $mail->booking_id . '</a>' : 'Contact message' ) . '</td><td>' . esc_html( $mail->subject ) . '</td><td>' . esc_html( $mail->recipient ) . '</td><td>' . esc_html( $mail->status ) . '</td><td>' . (int) $mail->attempts . '</td></tr>';
     }
     echo '</tbody></table></div>';
 }

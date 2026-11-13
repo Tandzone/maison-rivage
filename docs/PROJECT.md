@@ -1,6 +1,6 @@
 # Maison Rivage — Project reference
 
-Last updated: 2026-11-12
+Last updated: 2026-11-13
 
 ## Purpose
 
@@ -34,7 +34,7 @@ See [decisions](DECISIONS.md) for reservation rules and [ideas](IDEAS.md) for pr
 | 5 | Content and administration | Complete — room catalogue and journal administration |
 | 6 | Reservation workflow | Complete — verified locally |
 | 7 | Events and news | Complete — verified locally |
-| 8 | Verification and polish | Not started |
+| 8 | Verification and polish | In progress — functional checks passed; browser review pending |
 | 9 | Deployment | Not started |
 | 10 | Upwork portfolio presentation | Not started |
 
@@ -42,13 +42,15 @@ The outline is a planning reference, not an implementation approval for every pr
 
 ## Current state
 
-Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. V2 design is approved. The plugin now manages three category Pages, six private physical rooms, guest limits and approved EUR rates (95/135/195). Room collections/facts are dynamic, five journal stories and media are seeded, and native administration has inventory filters and safe field validation. Reservations now support availability search, email verification, manual confirmation/assignment, conflict prevention, cancellation and email notifications. Contact remains inactive. All mail is captured locally in Mailpit. Category-specific imagery remains for polish. See `booking-workflow.md`.
+Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. V2 design is approved. The plugin now manages three category Pages, six private physical rooms, guest limits and approved EUR rates (95/135/195). Room collections/facts are dynamic, five journal stories and media are seeded, and native administration has inventory filters and safe field validation. Reservations now support availability search, email verification, manual confirmation/assignment, conflict prevention, cancellation and email notifications. Contact now queues administrator emails with validation, duplicate protection and retry. All mail is captured locally in Mailpit. WebP derivatives reduce the three full-size image files by 90%; category-specific imagery remains an open choice. See `booking-workflow.md`.
 
-## Next — chantier 8: verification and polish
+## Current — chantier 8: verification and polish
 
-Chantiers 1–7 are complete within their current scope. Four demo events have editable stories, checked hall/suite schedules, upcoming/past listings and detail pages. Suite events block occupancy including the approved one-hour buffers; changes and cancellations share the booking lock protocol. The journal has five stories and related-story links. See `events-workflow.md`.
+Functional checks pass: catalogue, bookings, events, contact, concurrent occupancy, anonymous HTTP barriers and a 21-page public crawl. Contact/privacy starter pages are migrated without replacing edited pages. Read `quality-review.md` for evidence and limits.
 
-Next: review the full desktop/mobile site, accessibility, content and category imagery, and resolve the remaining inactive contact form. Production hosting and SMTP remain for chantier 9; the Upwork case study belongs to chantier 10. Repository: https://github.com/Tandzone/maison-rivage (`main`); source publication is not production website deployment.
+**Still open:** final visual/responsive/keyboard review. The browser access host was unavailable on 2026-11-13, so no new browser validation is claimed. The optional choice of distinct category imagery is awaiting the user; current reference images remain. Resume these checks before marking chantier 8 complete.
+
+Production hosting/SMTP/HTTPS/cron/backups remain chantier 9; the Upwork case study belongs to chantier 10. Repository: https://github.com/Tandzone/maison-rivage (`main`); source publication is not production deployment.
 
 ## Memory map
 
@@ -63,3 +65,5 @@ Next: review the full desktop/mobile site, accessibility, content and category i
 - `content-model.md`: editable category Pages, private rooms, rates, administration and verification.
 
 - `events-workflow.md`: editorial/schedule separation, event occupancy, public listings and verification.
+
+- `quality-review.md`: chantier 8 changes, checks and remaining browser/imagery review.
