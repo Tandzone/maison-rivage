@@ -44,6 +44,8 @@ The outline is a planning reference, not an implementation approval for every pr
 
 Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. V2 design is approved. The plugin now manages three category Pages, six private physical rooms, guest limits and approved EUR rates (95/135/195). Room collections/facts are dynamic, five journal stories and media are seeded, and native administration has inventory filters and safe field validation. Reservations now support availability search, email verification, manual confirmation/assignment, conflict prevention, cancellation and email notifications. Contact now queues administrator emails with validation, duplicate protection and retry. All mail is captured locally in Mailpit. WebP derivatives reduce the three full-size image files by 90%; three distinct category images have now been generated from the master reference. See `booking-workflow.md`.
 
+Private remote preview through the existing Tailscale Serve proxy is configured via ignored `RIVAGE_PREVIEW_URL`; both local and preview asset URLs are verified. See README for setup/reversal. This is not production deployment.
+
 ## Current — chantier 8: verification and polish
 
 Functional checks pass: catalogue, bookings, events, contact, concurrent occupancy, anonymous HTTP barriers and a 21-page public crawl. Contact/privacy starter pages are migrated without replacing edited pages. Read `quality-review.md` for evidence and limits.

@@ -71,3 +71,9 @@
 - Recorded explicit user approval to generate Garden Room, Ocean Balcony Room and Rivage Suite visuals.
 - Used built-in image generation with the actual approved master image for all three; preserved full prompts and generation mode in `assets/concepts/room-category-generation-v1.json`.
 - Saved three new 1536×1024 PNGs and reviewed garden/ocean/lounge differentiation, natural materials, muted green palette and coastline consistency. Preserved original/live imagery; result approval and site integration remain open.
+
+## 2026-11-13 — Fix assets through private Tailscale Serve
+
+- Confirmed screenshot failure: the HTTPS preview page referenced loopback CSS/images/fonts, causing connection-refused and mixed-content errors remotely.
+- Added explicit preview-origin configuration before WordPress bootstrap, exact-host HTTPS detection and local-only content URL normalization. Preserved localhost access and database content; no global URL replacement.
+- Enabled the existing private Serve origin only in ignored `.env`, recreated local services and verified both origins. Added a reusable HTTPS preview check covering pages/assets and CSS dependencies. Tailscale network access and Funnel settings were not changed.

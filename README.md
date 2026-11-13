@@ -104,3 +104,24 @@ Commit source, documentation and reference assets. Never commit `.env`, credenti
 - [Mailpit](https://mailpit.axllent.org/)
 
 Contact messages do not create reservations. Their bodies are cleared after SMTP acceptance and contact outbox rows expire after 24 hours. Local captured copies remain in Mailpit until cleared/reset. Original hotel PNGs are preserved; WebP derivatives provide lighter frontend delivery. Generation of three distinct category visuals is approved and the proposals are saved in `assets/concepts/`; review and live integration remain pending.
+
+## Private preview with Tailscale Serve
+
+Keep `WP_URL` as the local development origin. Add the HTTPS origin already provided by your private Tailscale Serve setup to your ignored `.env`:
+
+```dotenv
+RIVAGE_PREVIEW_URL=https://your-machine.your-tailnet.ts.net
+```
+
+Run `./bin/dev up` to recreate services with the updated environment. This does not configure Tailscale or enable public Funnel access. Docker stays bound to loopback. The preview origin must be HTTPS, have a `.ts.net` hostname and no port/path.
+
+For that exact configured Host only, `docker/php/preview.php` sets WordPress home/site URLs and HTTPS detection before WordPress builds CSS, JavaScript, upload and font URLs. Other requests and WP-CLI keep the local database URLs. The local preview MU plugin normalizes saved content links/images at rendering time between the two configured origins, without migrating the database. Arbitrary Host/forwarded-protocol headers cannot select an unconfigured preview origin.
+
+Verify both access paths:
+
+```bash
+python3 scripts/tests/site-http.py
+python3 scripts/tests/preview-http.py https://your-machine.your-tailnet.ts.net
+```
+
+To disable the WordPress preview adapter, empty `RIVAGE_PREVIEW_URL` and run `./bin/dev up`. Tailscale Serve itself is managed separately. Mail remains captured in local Mailpit. Existing queued emails retain the URLs with which they were originally created; submit a fresh demo request from the intended origin when testing verification links remotely.

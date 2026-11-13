@@ -13,6 +13,9 @@ x-wp-environment: &wp-environment
     define('DISALLOW_FILE_EDIT', true);
     define('DISABLE_WP_CRON', true);
     define('AUTOMATIC_UPDATER_DISABLED', true);
+    require '/opt/rivage-preview.php';
+  RIVAGE_LOCAL_URL: ${WP_URL:-http://localhost:8080}
+  RIVAGE_PREVIEW_URL: ${RIVAGE_PREVIEW_URL:-}
   RIVAGE_SMTP_HOST: mailpit
   RIVAGE_SMTP_PORT: "1025"
 
@@ -47,6 +50,8 @@ services:
       - ./wp-content/themes/maison-rivage:/var/www/html/wp-content/themes/maison-rivage:ro
       - ./wp-content/plugins/maison-rivage-core:/var/www/html/wp-content/plugins/maison-rivage-core:ro
       - ./wp-content/mu-plugins/rivage-local-mail.php:/var/www/html/wp-content/mu-plugins/rivage-local-mail.php:ro
+      - ./docker/php/preview.php:/opt/rivage-preview.php:ro
+      - ./wp-content/mu-plugins/rivage-local-preview.php:/var/www/html/wp-content/mu-plugins/rivage-local-preview.php:ro
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/rivage-local.ini:ro
       - ./scripts:/workspace/scripts:ro
     healthcheck:

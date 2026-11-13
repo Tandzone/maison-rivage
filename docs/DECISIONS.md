@@ -125,3 +125,7 @@ Chantier 8 implements the approved contact page with administrator-only mail del
 ## D23 — Generate distinct category imagery
 
 On 2026-11-13 the user explicitly approved three distinct visuals for Garden Room, Ocean Balcony Room and Rivage Suite. The approved master was supplied to built-in image generation for each composition. New files and full prompts are preserved under `assets/concepts/`; this approval authorizes generation, not automatic approval of every resulting image. The three generated proposals have been visually checked for category differentiation and reference consistency. User image review and live-site integration remain open.
+
+## D24 — Private Tailscale preview URL correction
+
+The user reported a remotely viewed page with CSS/images/fonts still pointing to localhost. Inspection confirmed an existing private Tailscale Serve reverse proxy to loopback port 8080. The local `.env` now selects its HTTPS origin; source configuration uses an empty optional `RIVAGE_PREVIEW_URL`. WordPress home/site URLs and HTTPS detection change only for the explicitly configured preview Host, and saved content URLs are normalized at rendering time. Database URLs remain local. This fixes the existing private preview; it does not enable Funnel, change Tailscale access rules or deploy production hosting.
