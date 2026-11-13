@@ -103,4 +103,4 @@ Commit source, documentation and reference assets. Never commit `.env`, credenti
 - [WordPress child themes](https://developer.wordpress.org/themes/advanced-topics/child-themes/)
 - [Mailpit](https://mailpit.axllent.org/)
 
-Contact messages do not create reservations. Their bodies are cleared after SMTP acceptance and contact outbox rows expire after 24 hours. Local captured copies remain in Mailpit until cleared/reset. Original hotel PNGs are preserved; WebP derivatives provide lighter frontend delivery. No new category imagery has been approved.
+Contact messages do not create reservations. Their bodies are cleared after SMTP acceptance and contact outbox rows expire after 24 hours. Local captured copies remain in Mailpit until cleared/reset. Original hotel PNGs are preserved; WebP derivatives provide lighter frontend delivery. Generation of three distinct category visuals is approved and the proposals are saved in `assets/concepts/`; review and live integration remain pending.

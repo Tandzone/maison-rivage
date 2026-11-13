@@ -65,3 +65,9 @@
 - Added non-destructive WebP derivatives (90% reduction across the three full-size image files), responsive seeded-media delivery and clearer focus outlines.
 - Passed catalogue, booking, event and contact suites, both occupancy races, anonymous booking checks and contact HTTP/SMTP. Public crawl verifies 21 pages and local image sources; repeat setup preserves page/schedule snapshots.
 - Browser host was unavailable on inventory and direct-open attempts. Final visual, responsive and keyboard checks remain open, as does the optional category-imagery choice. No new screenshot, accessibility certification or page-speed score is claimed. See `quality-review.md`.
+
+## 2026-11-13 — Three distinct room-category image proposals
+
+- Recorded explicit user approval to generate Garden Room, Ocean Balcony Room and Rivage Suite visuals.
+- Used built-in image generation with the actual approved master image for all three; preserved full prompts and generation mode in `assets/concepts/room-category-generation-v1.json`.
+- Saved three new 1536×1024 PNGs and reviewed garden/ocean/lounge differentiation, natural materials, muted green palette and coastline consistency. Preserved original/live imagery; result approval and site integration remain open.

@@ -45,3 +45,15 @@ Extend the same timber structure, woven ceiling, pale floors and ivory walls int
 | `assets/concepts/maison-rivage-cello-evening-v1.png` | Adult cellist and small audience in rearranged lounge, view from reception side | Draft generated from hall-v1 reference; awaiting approval. Recognizable hall identity; generated perspective is not a measured reconstruction. |
 
 The diptych is a concept reference. Generate separate compositions for final page imagery when needed.
+
+## Room-category compositions — 2026-11-13
+
+The user approved generating three distinct room-category visuals for chantier 8. Built-in image generation received the master reference as an actual image for every composition. All three are single continuous 1536×1024 views, not diptychs. They are saved as new assets; the master and existing live previews remain intact.
+
+| Asset | Scene | Review |
+|---|---|---|
+| `assets/concepts/maison-rivage-garden-room-v1.png` | Double bedroom opening onto a ground-level garden terrace | Garden outlook, compact room, no ocean view or separate lounge; shared materials/palette consistent |
+| `assets/concepts/maison-rivage-ocean-balcony-room-v1.png` | Double bedroom opening onto a balcony above the cove | Timber railing, two chairs, recognizable cove/headland; shared materials/palette consistent |
+| `assets/concepts/maison-rivage-rivage-suite-v1.png` | Larger sleeping area, woven lounge seating and ocean terrace | Distinct lounge and clearer circulation; shared coastline/materials/palette consistent |
+
+Generated and visually reviewed as coherent category proposals; user review of the resulting images is pending. They are not measured architectural reconstructions. Live-site integration and responsive crop review are still to do. Complete prompts and built-in generation mode are recorded in `assets/concepts/room-category-generation-v1.json`.

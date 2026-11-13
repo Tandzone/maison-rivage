@@ -42,5 +42,5 @@ Contact HTTP checks leave a disposable captured email in Mailpit and consume the
 
 1. Reopen browser access and inspect home, catalogue and each category, booking/results/errors, contact/success/error, event listing/detail, journal/article, policies and 404 at desktop, 768px, 390px and 320px.
 2. Use Tab/Shift+Tab/Enter/Escape to review skip links, mobile navigation, form focus/error feedback and buttons; check zoom and reduced-motion rendering. Recheck console/network errors and rendered contrast.
-3. Decide whether to retain the current reference imagery or generate distinct garden/balcony/suite compositions. The optional question is pending; no new imagery has been generated or silently approved.
+3. The user approved distinct garden/balcony/suite compositions. Three reference-based proposals are saved in `assets/concepts/`; review the resulting images, integrate them and verify responsive crops. The existing live previews remain intact.
 4. Review fictional content and event dates before portfolio screenshots. Hosting, HTTPS, production SMTP, cron and backups belong to chantier 9.

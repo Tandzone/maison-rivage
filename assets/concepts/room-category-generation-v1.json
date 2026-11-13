@@ -1,0 +1,25 @@
+{
+  "mode": "built-in image_gen",
+  "reference": "assets/concepts/maison-rivage-direction-v1.png",
+  "date": "2026-11-13",
+  "images": [
+    {
+      "name": "garden-room",
+      "destination": "assets/concepts/maison-rivage-garden-room-v1.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: hotel website room-category photograph. Input image 1 is the approved architecture/material/landscape reference for fictional Maison Rivage in coastal Madagascar. Generate ONE continuous wide landscape photograph, approximately 3:2, NOT a diptych, collage, split view or montage. Match the reference's intimate boutique scale, warm timber posts/beams/doors, woven ceiling panels and lamps, ivory plaster, pale sand stone floor, natural woven rug, white linen with muted deep green accents. Believable architectural photography, natural soft daylight, restrained warm colour, eye-level lens without extreme wide-angle distortion. No people, writing, logos, watermarks, pools or grand resort structures. Physically plausible doors/furniture, unobstructed circulation. Garden Room: a compact comfortable double bedroom opening at ground level onto its own shaded garden terrace. Frame the bed and open timber doors together. Beyond is lush tropical garden greenery and a woven chair on the terrace. No ocean vista or balcony railing in this category. Simpler and smaller than a suite; no separate lounge.",
+      "status": "Generated, reviewed for category differentiation; awaiting user image review."
+    },
+    {
+      "name": "ocean-balcony-room",
+      "destination": "assets/concepts/maison-rivage-ocean-balcony-room-v1.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: hotel website room-category photograph. Input image 1 is the approved architecture/material/landscape reference for fictional Maison Rivage in coastal Madagascar. Generate ONE continuous wide landscape photograph, approximately 3:2, NOT a diptych, collage, split view or montage. Match the reference's intimate boutique scale, warm timber posts/beams/doors, woven ceiling panels and lamps, ivory plaster, pale sand stone floor, natural woven rug, white linen with muted deep green accents. Believable architectural photography, natural soft daylight, restrained warm colour, eye-level lens without extreme wide-angle distortion. No people, writing, logos, watermarks, pools or grand resort structures. Physically plausible doors/furniture, unobstructed circulation. Ocean Balcony Room: a comfortable double bedroom opening onto a timber balcony with the reference's wooden railing and two woven lounge chairs. Show bed and balcony in ONE coherent camera view. The sheltered sandy cove, rocky green headland on the left and calm ocean must match the reference landscape; no new skyline, pier or islands. More compact than a suite, no separate lounge.",
+      "status": "Generated, reviewed for category differentiation; awaiting user image review."
+    },
+    {
+      "name": "rivage-suite",
+      "destination": "assets/concepts/maison-rivage-rivage-suite-v1.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: hotel website room-category photograph. Input image 1 is the approved architecture/material/landscape reference for fictional Maison Rivage in coastal Madagascar. Generate ONE continuous wide landscape photograph, approximately 3:2, NOT a diptych, collage, split view or montage. Match the reference's intimate boutique scale, warm timber posts/beams/doors, woven ceiling panels and lamps, ivory plaster, pale sand stone floor, natural woven rug, white linen with muted deep green accents. Believable architectural photography, natural soft daylight, restrained warm colour, eye-level lens without extreme wide-angle distortion. No people, writing, logos, watermarks, pools or grand resort structures. Physically plausible doors/furniture, unobstructed circulation. Rivage Suite: a visibly more spacious double bedroom with a small adjoining lounge zone of a woven sofa and chair, opening onto an ocean-view timber terrace. Show sleeping area, lounge and opening in one plausible continuous interior. Keep restrained six-room boutique hotel scale, not a villa or ballroom. Outside retain the same sheltered sandy cove, rocky green headland to the left and calm ocean from the reference. Clear passage between bed, lounge and terrace.",
+      "status": "Generated, reviewed for category differentiation; awaiting user image review."
+    }
+  ]
+}

@@ -121,3 +121,7 @@ Chantier 7 uses a public `rivage_event` post type for native block editing and a
 ## D22 — Contact and polish implementation defaults
 
 Chantier 8 implements the approved contact page with administrator-only mail delivery through the existing outbox, without a guest auto-reply or booking. Implementation defaults: signed submission idempotency, five attempts per IP/hour, name/email/message validation and 24-hour contact-outbox retention. Local messages remain in Mailpit, whose copies have their own lifecycle. These are implementation choices, not new user-approved operational policies. Existing visuals receive WebP encoding derivatives; the optional choice of new category imagery remains unapproved. Browser review is pending due to unavailable browser access; see `quality-review.md`.
+
+## D23 — Generate distinct category imagery
+
+On 2026-11-13 the user explicitly approved three distinct visuals for Garden Room, Ocean Balcony Room and Rivage Suite. The approved master was supplied to built-in image generation for each composition. New files and full prompts are preserved under `assets/concepts/`; this approval authorizes generation, not automatic approval of every resulting image. The three generated proposals have been visually checked for category differentiation and reference consistency. User image review and live-site integration remain open.

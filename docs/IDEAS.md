@@ -4,7 +4,7 @@ These items are proposals, not approved decisions. Move accepted choices to `DEC
 
 ## Editorial and imagery follow-up
 
-- Pending optional user choice (chantier 8): three distinct reference-consistent garden/balcony/suite visuals, or retain current imagery.
+- Three distinct garden/balcony/suite visuals are generated following user approval (D23); review results and integrate the selected images with responsive crops.
 
 - Maison Rivage's story and target guest profile; the hotel name is approved.
 - Review generated hall/event drafts before publication; see `VISUAL-REFERENCE.md`.
