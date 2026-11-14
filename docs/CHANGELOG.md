@@ -82,3 +82,7 @@
 
 - User requested date selection instead of typing. Retained native date inputs and added progressive `showPicker()` activation when clicking anywhere in the search date fields; the calendar icon and keyboard entry remain available when unsupported or blocked.
 - Verified JavaScript/PHP syntax and script delivery on home/booking through localhost and the private HTTPS preview. Native popup interaction still belongs to the pending browser review.
+
+## 2026-11-13 — Separate Typesense portfolio idea
+
+- Recorded the user's interest in a separate search-focused site with freely available data indexed into an owned Typesense collection, reflecting their existing professional experience. Dataset/licensing, scope and stack remain to discuss; Maison Rivage's scope is unchanged.

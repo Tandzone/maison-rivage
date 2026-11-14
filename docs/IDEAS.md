@@ -36,3 +36,7 @@ See `site-architecture.md` and D12 for approved pages, navigation and journeys.
 - Consider resetting demo reservations regularly; mechanism and frequency not decided.
 - Desktop/mobile screenshots, short walkthrough and English case study.
 - Four events and five journal articles are seeded. Review dates before deployment; repeat setup deliberately preserves them.
+
+## Separate portfolio project — Typesense search
+
+User interest recorded on 2026-11-13; separate from Maison Rivage. Build a second website demonstrating the user's professional experience over several years with search/indexing functionality. Use a free external dataset, subject to verifying its licence and redistribution/indexing permissions, and import it into a Typesense collection controlled by the project. Dataset, domain and technology stack remain undecided. Candidate scope to discuss: reproducible import/normalization, collection schema, full-text search, facets/filters, autocomplete, relevance tuning and index refresh. This is a future-project idea, not authorization to start implementation or deploy a service. Preserve chantier 8 as Maison Rivage's current work.
