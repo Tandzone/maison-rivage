@@ -104,3 +104,7 @@
 - Added a square 512px Site Icon derived from the existing M-and-waves SVG monogram, with green strokes on ivory and transparent rounded corners.
 - Seeded the native WordPress `site_icon` attachment/option and 32/180/192/270px variants; repeat setup preserves an administrator's replacement or deliberate removal. SVG source and PNG master are tracked.
 - Verified native favicon/touch-icon tags, exact 32/192px PNG dimensions and successful image delivery through localhost and private Tailscale HTTPS.
+
+## 2026-11-14 — Align homepage journal cards
+
+- Removed the unintended 24px WordPress flow margins from the second and third journal grid items. All three cards now share the same top edge. Browser verified equal top coordinates on desktop and zero inherited margins/no horizontal overflow at 390px; the grid gap retains mobile spacing.

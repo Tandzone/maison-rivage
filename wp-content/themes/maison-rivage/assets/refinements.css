@@ -160,3 +160,5 @@
 /* Separate the event photograph from its information panel without collapsing margins. */
 .single-rivage_event .rivage-main .wp-block-post-content { padding-block-start:clamp(24px,3vw,40px); }
 .single-rivage_event .rivage-event-facts:first-child { margin-block-start:0; }
+/* Grid gaps provide journal-card spacing; remove inherited WordPress flow margins. */
+.rivage-journal-grid .wp-block-post-template>li { margin-block:0; }
