@@ -108,3 +108,7 @@
 ## 2026-11-14 — Align homepage journal cards
 
 - Removed the unintended 24px WordPress flow margins from the second and third journal grid items. All three cards now share the same top edge. Browser verified equal top coordinates on desktop and zero inherited margins/no horizontal overflow at 390px; the grid gap retains mobile spacing.
+
+## 2026-11-14 — Journal article photograph spacing
+
+- Added responsive spacing between a journal article's Featured image and its text, scoped to adjacent image/content blocks on single Posts. Browser measured approximately 38px on desktop and 24px at 390px, without horizontal overflow. Posts without Featured images receive no extra gap.
