@@ -18,9 +18,7 @@
 <!-- /wp:group -->
 <!-- wp:group {"className":"rivage-room-hero rivage-wrap","layout":{"type":"default"}} -->
 <div class="wp-block-group rivage-room-hero rivage-wrap">
-<!-- wp:image {"sizeSlug":"full","className":"rivage-room-detail-view"} -->
-<figure class="wp-block-image size-full rivage-room-detail-view"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/coastal-suite.png' ); ?>" alt="Maison Rivage coastal bedroom with natural timber and soft linen"/></figure>
-<!-- /wp:image -->
+<!-- wp:shortcode -->[rivage_room_gallery]<!-- /wp:shortcode -->
 <!-- wp:group {"className":"rivage-stay-summary","layout":{"type":"default"}} -->
 <div class="wp-block-group rivage-stay-summary">
 <!-- wp:paragraph {"className":"rivage-eyebrow"} -->
@@ -66,9 +64,7 @@
 <!-- /wp:group -->
 <!-- wp:group {"className":"rivage-room-story-photo","layout":{"type":"default"}} -->
 <div class="wp-block-group rivage-room-story-photo">
-<!-- wp:image {"sizeSlug":"full","className":"rivage-terrace-view"} -->
-<figure class="wp-block-image size-full rivage-terrace-view"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/coastal-suite.png' ); ?>" alt="Shaded timber terrace overlooking the tropical coastline"/></figure>
-<!-- /wp:image -->
+<!-- wp:shortcode -->[rivage_room_outdoor]<!-- /wp:shortcode -->
 <!-- wp:paragraph {"className":"rivage-photo-caption"} -->
 <p class="rivage-photo-caption">Garden terrace · Maison Rivage</p>
 <!-- /wp:paragraph -->

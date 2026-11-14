@@ -1,0 +1,60 @@
+{
+  "mode": "built-in imagegen",
+  "date": "2026-11-14",
+  "images": [
+    {
+      "name": "garden-room-bathroom",
+      "prompt": "Use case: photorealistic-natural. A single continuous landscape architectural photograph 3:2 for the fictional Maison Rivage boutique hotel in Madagascar. Image 1 is the master material/architecture/coastline reference. Image 2 is the particular category room; preserve its materials, furnishings, restrained scale and coherent spatial identity. Natural daylight, ivory plaster, warm timber, pale sand stone, woven textures, muted green. No people, text, logos, collage or split panels. Physically credible construction and furniture. Show the ensuite bathroom of a compact garden-facing room. Walk-in shower with clear glass, realistic drain and a single shower fixture; pale stone floor with safe shower threshold, ivory walls, warm timber vanity, stone basin and simple mirror, folded white towels. No bathtub. Compact, single-basin vanity, restrained small-hotel scale. Garden daylight through a privacy-screened window, no implausible view through shower walls. Mirror reflections coherent; no duplicate fixtures.",
+      "references": [
+        "assets/concepts/maison-rivage-direction-v1.png",
+        "assets/concepts/maison-rivage-garden-room-v1.png"
+      ],
+      "output": "assets/concepts/maison-rivage-garden-room-bathroom-v1.png"
+    },
+    {
+      "name": "garden-room-terrace",
+      "prompt": "Use case: photorealistic-natural. A single continuous landscape architectural photograph 3:2 for the fictional Maison Rivage boutique hotel in Madagascar. Image 1 is the master material/architecture/coastline reference. Image 2 is the particular category room; preserve its materials, furnishings, restrained scale and coherent spatial identity. Natural daylight, ivory plaster, warm timber, pale sand stone, woven textures, muted green. No people, text, logos, collage or split panels. Physically credible construction and furniture. Show a closer independent photograph of the outdoor space of a compact garden-facing room, from near the open room doorway. Ground-level shaded stone terrace surrounded by tropical greenery, woven chair and small timber side table matching image 2. No ocean vista and no elevated railing. Show inviting usable seating and warm structural timber with believable geometry. No extra amenities or swimming pool.",
+      "references": [
+        "assets/concepts/maison-rivage-direction-v1.png",
+        "assets/concepts/maison-rivage-garden-room-v1.png"
+      ],
+      "output": "assets/concepts/maison-rivage-garden-room-terrace-v1.png"
+    },
+    {
+      "name": "ocean-balcony-room-bathroom",
+      "prompt": "Use case: photorealistic-natural. A single continuous landscape architectural photograph 3:2 for the fictional Maison Rivage boutique hotel in Madagascar. Image 1 is the master material/architecture/coastline reference. Image 2 is the particular category room; preserve its materials, furnishings, restrained scale and coherent spatial identity. Natural daylight, ivory plaster, warm timber, pale sand stone, woven textures, muted green. No people, text, logos, collage or split panels. Physically credible construction and furniture. Show the ensuite bathroom of a compact ocean balcony room. Walk-in shower with clear glass, realistic drain and a single shower fixture; pale stone floor with safe shower threshold, ivory walls, warm timber vanity, stone basin and simple mirror, folded white towels. No bathtub. Compact, single-basin vanity, restrained small-hotel scale. Garden daylight through a privacy-screened window, no implausible view through shower walls. Mirror reflections coherent; no duplicate fixtures.",
+      "references": [
+        "assets/concepts/maison-rivage-direction-v1.png",
+        "assets/concepts/maison-rivage-ocean-balcony-room-v1.png"
+      ],
+      "output": "assets/concepts/maison-rivage-ocean-balcony-room-bathroom-v1.png"
+    },
+    {
+      "name": "ocean-balcony-room-terrace",
+      "prompt": "Use case: photorealistic-natural. A single continuous landscape architectural photograph 3:2 for the fictional Maison Rivage boutique hotel in Madagascar. Image 1 is the master material/architecture/coastline reference. Image 2 is the particular category room; preserve its materials, furnishings, restrained scale and coherent spatial identity. Natural daylight, ivory plaster, warm timber, pale sand stone, woven textures, muted green. No people, text, logos, collage or split panels. Physically credible construction and furniture. Show a closer independent photograph of the outdoor space of a compact ocean balcony room, from near the open room doorway. Timber terrace/balcony with matching wooden railing and woven chairs, the same sandy cove and rocky green headland on the left as the master reference, calm ocean beyond. Preserve existing shoreline, no new islands or buildings. Show inviting usable seating and warm structural timber with believable geometry. No extra amenities or swimming pool.",
+      "references": [
+        "assets/concepts/maison-rivage-direction-v1.png",
+        "assets/concepts/maison-rivage-ocean-balcony-room-v1.png"
+      ],
+      "output": "assets/concepts/maison-rivage-ocean-balcony-room-terrace-v1.png"
+    },
+    {
+      "name": "rivage-suite-bathroom",
+      "prompt": "Use case: photorealistic-natural. A single continuous landscape architectural photograph 3:2 for the fictional Maison Rivage boutique hotel in Madagascar. Image 1 is the master material/architecture/coastline reference. Image 2 is the particular category room; preserve its materials, furnishings, restrained scale and coherent spatial identity. Natural daylight, ivory plaster, warm timber, pale sand stone, woven textures, muted green. No people, text, logos, collage or split panels. Physically credible construction and furniture. Show the ensuite bathroom of the more spacious suite. Walk-in shower with clear glass, realistic drain and a single shower fixture; pale stone floor with safe shower threshold, ivory walls, warm timber vanity, stone basin and simple mirror, folded white towels. No bathtub. More spacious, generous double-basin vanity, discreet refined proportions. Garden daylight through a privacy-screened window, no implausible view through shower walls. Mirror reflections coherent; no duplicate fixtures.",
+      "references": [
+        "assets/concepts/maison-rivage-direction-v1.png",
+        "assets/concepts/maison-rivage-rivage-suite-v1.png"
+      ],
+      "output": "assets/concepts/maison-rivage-rivage-suite-bathroom-v1.png"
+    },
+    {
+      "name": "rivage-suite-terrace",
+      "prompt": "Use case: photorealistic-natural. A single continuous landscape architectural photograph 3:2 for the fictional Maison Rivage boutique hotel in Madagascar. Image 1 is the master material/architecture/coastline reference. Image 2 is the particular category room; preserve its materials, furnishings, restrained scale and coherent spatial identity. Natural daylight, ivory plaster, warm timber, pale sand stone, woven textures, muted green. No people, text, logos, collage or split panels. Physically credible construction and furniture. Show a closer independent photograph of the outdoor space of the more spacious suite, from near the open room doorway. Timber terrace/balcony with matching wooden railing and woven chairs, the same sandy cove and rocky green headland on the left as the master reference, calm ocean beyond. Preserve existing shoreline, no new islands or buildings. Show inviting usable seating and warm structural timber with believable geometry. No extra amenities or swimming pool.",
+      "references": [
+        "assets/concepts/maison-rivage-direction-v1.png",
+        "assets/concepts/maison-rivage-rivage-suite-v1.png"
+      ],
+      "output": "assets/concepts/maison-rivage-rivage-suite-terrace-v1.png"
+    }
+  ]
+}

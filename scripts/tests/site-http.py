@@ -14,7 +14,9 @@ class Document(HTMLParser):
         a=dict(attrs)
         if tag=='h1': self.h1+=1
         if tag=='main': self.mains+=1
-        if tag=='a' and a.get('href'): self.links.append(a['href'])
+        if tag=='a' and a.get('href'):
+            if a['href'].split('?')[0].lower().endswith(('.webp','.png','.jpg','.jpeg')):self.images.append(a['href'])
+            else:self.links.append(a['href'])
         if tag=='img':
             if 'alt' not in a: self.missing_alt+=1
             if a.get('src'): self.images.append(a['src'])

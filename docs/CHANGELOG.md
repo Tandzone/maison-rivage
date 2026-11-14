@@ -86,3 +86,11 @@
 ## 2026-11-13 — Separate Typesense portfolio idea
 
 - Recorded the user's interest in a separate search-focused site with freely available data indexed into an owned Typesense collection, reflecting their existing professional experience. Dataset/licensing, scope and stack remain to discuss; Maison Rivage's scope is unchanged.
+
+## 2026-11-14 — Complete chantier 8: room galleries and browser review
+
+- User authorized bathroom/outdoor photography and editable/fullscreen galleries, with explicit desktop/mobile, keyboard and calendar checks. Generated six reference-based views, preserved full prompts, and integrated all nine photographs as WebP Media Library assets.
+- Added protected administrator media selection/ordering and dynamic gallery/outdoor shortcodes. Starter migrations preserve customized content and Featured images; repeat setup preserved content/gallery/media snapshots.
+- Added native-dialog fullscreen viewing, thumbnails, arrow/Enter/Space navigation, explicit Tab containment, Escape/focus restoration and pointer swipes, without autoplay. Fixed the focus escape discovered by browser testing. Increased header controls to 44px minimum height.
+- Passed 42 layout checks across 14 pages at 1280/768/320px, inspected additional 390px/screenshots, verified menu/skip links, selected real dates in native calendars and obtained availability results. Verified native media selection/reorder/Page save and HTTPS Tailscale gallery operation without console errors or loopback URLs.
+- Passed gallery permission/data tests, catalogue/bookings/events regressions, public/preview HTTP asset crawls, core/PHP checks and local SMTP. Practical browser verification is complete; no exhaustive accessibility certification is claimed. Next: chantier 9 deployment.

@@ -56,4 +56,8 @@ The user approved generating three distinct room-category visuals for chantier 8
 | `assets/concepts/maison-rivage-ocean-balcony-room-v1.png` | Double bedroom opening onto a balcony above the cove | Timber railing, two chairs, recognizable cove/headland; shared materials/palette consistent |
 | `assets/concepts/maison-rivage-rivage-suite-v1.png` | Larger sleeping area, woven lounge seating and ocean terrace | Distinct lounge and clearer circulation; shared coastline/materials/palette consistent |
 
-Generated and visually reviewed as coherent category proposals; user review of the resulting images is pending. They are not measured architectural reconstructions. Live-site integration and responsive crop review are still to do. Complete prompts and built-in generation mode are recorded in `assets/concepts/room-category-generation-v1.json`.
+Generated and visually reviewed as coherent category proposals; integrated following the user-authorized gallery work on 2026-11-14. They are not measured architectural reconstructions. They now supply gallery hero photographs and category cards; desktop/mobile crops were reviewed. Complete prompts and built-in generation mode are recorded in `assets/concepts/room-category-generation-v1.json`.
+
+## Room galleries — 2026-11-14
+
+Six additional bathroom/outdoor views were generated with the master plus the respective category bedroom as actual image references. The agent reviewed materials, plausible furnishings and coherent category differentiation; the suite bathroom has a double vanity, the other ensuites a single basin, and all have walk-in showers. They were integrated as part of the user-authorized gallery implementation. See `room-gallery.md` for all nine PNG source paths, WebP serving files and media administration. Full new prompts are preserved in `assets/concepts/gallery-generation-v1.json` (built-in imagegen).

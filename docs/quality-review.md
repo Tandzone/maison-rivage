@@ -1,6 +1,6 @@
 # Chantier 8 — quality review
 
-Review date: 2026-11-13. Functional and source checks passed locally. **Final browser review remains pending:** the computer-use browser host was unavailable in this session. This report is not an accessibility certification or a measured page-speed score.
+Review dates: 2026-11-13–14. Functional/source checks passed locally, and browser access was restored on 2026-11-14. **Chantier 8 is complete within the agreed portfolio scope.** This report is not an accessibility certification or a measured page-speed score.
 
 ## Changes delivered
 
@@ -38,9 +38,16 @@ python3 scripts/tests/site-http.py
 
 Contact HTTP checks leave a disposable captured email in Mailpit and consume the normal submission rate limit. Avoid repeatedly running them against the same local IP within one hour.
 
-## Remaining before closing chantier 8
+## Browser follow-up completed — 2026-11-14
 
-1. Reopen browser access and inspect home, catalogue and each category, booking/results/errors, contact/success/error, event listing/detail, journal/article, policies and 404 at desktop, 768px, 390px and 320px.
-2. Use Tab/Shift+Tab/Enter/Escape to review skip links, mobile navigation, form focus/error feedback and buttons; check zoom and reduced-motion rendering. Recheck console/network errors and rendered contrast.
-3. The user approved distinct garden/balcony/suite compositions. Three reference-based proposals are saved in `assets/concepts/`; review the resulting images, integrate them and verify responsive crops. The existing live previews remain intact.
-4. Review fictional content and event dates before portfolio screenshots. Hosting, HTTPS, production SMTP, cron and backups belong to chantier 9.
+- Integrated nine category-specific bedroom/outdoor/bathroom photographs and administrator-editable galleries. Full implementation/source register: `room-gallery.md`.
+- Checked 14 public pages at 1280×900, 768×900 and 320×900: 42 layout checks with no horizontal overflow, missing main H1 or broken visible image. Inspected representative desktop, tablet and 390px/mobile screenshots. The viewer's unloaded hidden image is excluded from visible-image checks.
+- Exercised gallery thumbnails, fullscreen viewing, Previous/Next, arrow keys, Enter/Space, Tab/Shift+Tab focus containment, Escape and focus restoration. A discovered focus escape to browser chrome was corrected and retested. Horizontal pointer dragging changes photos without autoplay; pinch/vertical movement is retained by the CSS/pointer handling.
+- Verified the mobile menu with Enter/Escape and the skip link's next focus landing inside main content.
+- Opened the native booking date popup by clicking its field, selected dates with arrow keys/Enter on desktop and at 390px, and submitted a two-night availability search successfully.
+- Verified Media Library preselection, ordering controls and native Page save (Page updated); no editor console errors. Verified viewer interaction through private Tailscale HTTPS with no localhost asset references or console errors.
+- Repeated setup preserved category content, gallery order, Featured-image IDs and all nine gallery media records. Gallery, catalogue, booking and event regression suites passed, along with core/PHP checks and local SMTP.
+
+Screenshots/layout records are local ignored review artifacts in `artifacts/previews/`: `room-gallery-desktop.png`, `room-gallery-mobile.png`, `room-bathroom-viewer.png`, `chantier-8-layout-checks.json`.
+
+The review uses browser viewport sizes and practical keyboard checks. It is not a physical-device/Safari/screen-reader certification, a dedicated browser-zoom audit, or a measured performance score. Production HTTPS/SMTP/cron/backups and final hosting checks remain chantier 9; portfolio captures/case study remain chantier 10.

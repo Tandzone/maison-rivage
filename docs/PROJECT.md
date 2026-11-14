@@ -1,6 +1,6 @@
 # Maison Rivage — Project reference
 
-Last updated: 2026-11-13
+Last updated: 2026-11-14
 
 ## Purpose
 
@@ -34,7 +34,7 @@ See [decisions](DECISIONS.md) for reservation rules and [ideas](IDEAS.md) for pr
 | 5 | Content and administration | Complete — room catalogue and journal administration |
 | 6 | Reservation workflow | Complete — verified locally |
 | 7 | Events and news | Complete — verified locally |
-| 8 | Verification and polish | In progress — functional checks passed; browser review pending |
+| 8 | Verification and polish | Complete — galleries, browser, keyboard and calendar checks passed |
 | 9 | Deployment | Not started |
 | 10 | Upwork portfolio presentation | Not started |
 
@@ -42,17 +42,15 @@ The outline is a planning reference, not an implementation approval for every pr
 
 ## Current state
 
-Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. V2 design is approved. The plugin now manages three category Pages, six private physical rooms, guest limits and approved EUR rates (95/135/195). Room collections/facts are dynamic, five journal stories and media are seeded, and native administration has inventory filters and safe field validation. Reservations now support availability search, email verification, manual confirmation/assignment, conflict prevention, cancellation and email notifications. Contact now queues administrator emails with validation, duplicate protection and retry. All mail is captured locally in Mailpit. WebP derivatives reduce the three full-size image files by 90%; three distinct category images have now been generated from the master reference. See `booking-workflow.md`.
+Local WordPress is running at `http://localhost:8080`, administration at `/wp-admin/`, and Mailpit at `http://localhost:8025`. V2 design is approved. The plugin now manages three category Pages, six private physical rooms, guest limits and approved EUR rates (95/135/195). Room collections/facts are dynamic, five journal stories and media are seeded, and native administration has inventory filters and safe field validation. Reservations now support availability search, email verification, manual confirmation/assignment, conflict prevention, cancellation and email notifications. Contact now queues administrator emails with validation, duplicate protection and retry. All mail is captured locally in Mailpit. WebP derivatives reduce the three full-size image files by 90%; nine distinct room/outdoor/bathroom photographs are integrated in editable galleries and category cards. See `booking-workflow.md`.
 
 Private remote preview through the existing Tailscale Serve proxy is configured via ignored `RIVAGE_PREVIEW_URL`; both local and preview asset URLs are verified. See README for setup/reversal. This is not production deployment.
 
-## Current — chantier 8: verification and polish
+## Next — chantier 9: deployment
 
-Functional checks pass: catalogue, bookings, events, contact, concurrent occupancy, anonymous HTTP barriers and a 21-page public crawl. Contact/privacy starter pages are migrated without replacing edited pages. Read `quality-review.md` for evidence and limits.
+Chantiers 1–8 are complete within the fictional portfolio scope. Three category galleries each contain bedroom, outdoor and ensuite photographs, with a fullscreen keyboard/pointer viewer and native Media Library editing. Browser access was restored on 2026-11-14: desktop/tablet/mobile layouts, viewer focus and navigation, mobile menu, skip links, native date selection and availability results were verified. See `room-gallery.md` and the updated `quality-review.md` for evidence and limits.
 
-**Still open:** final visual/responsive/keyboard review. The browser access host was unavailable on 2026-11-13, so no new browser validation is claimed. The user approved three distinct category images; they are generated and saved in `assets/concepts/`, with prompts in `room-category-generation-v1.json`. Image review and site integration remain; the live previews still use the prior reference. Resume these checks before marking chantier 8 complete.
-
-Production hosting/SMTP/HTTPS/cron/backups remain chantier 9; the Upwork case study belongs to chantier 10. Repository: https://github.com/Tandzone/maison-rivage (`main`); source publication is not production deployment.
+Choose an economical WordPress host, then configure production HTTPS, SMTP, scheduled tasks and backups. The current Tailscale setup remains a private local preview. The separate Typesense idea is not part of Maison Rivage. Upwork case study/screenshots belong to chantier 10. Repository: https://github.com/Tandzone/maison-rivage (`main`). No production deployment has occurred.
 
 ## Memory map
 
@@ -69,3 +67,5 @@ Production hosting/SMTP/HTTPS/cron/backups remain chantier 9; the Upwork case st
 - `events-workflow.md`: editorial/schedule separation, event occupancy, public listings and verification.
 
 - `quality-review.md`: chantier 8 changes, checks and remaining browser/imagery review.
+
+- `room-gallery.md`: photo sources, media editing, viewer behaviour and browser verification.

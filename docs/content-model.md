@@ -49,3 +49,7 @@ The native Query block supplies recent journal articles on Home. The Journal use
 ## Verification
 
 Run `./bin/dev wp eval-file /workspace/scripts/tests/catalogue.php` locally. It checks price/capacity validation, save authorization/nonces, rejection of partial invalid changes, operational fields, dynamic rendering/escaping and inventory REST privacy. Temporary test mutations are restored. `./bin/dev check` also covers PHP syntax, core integrity and SMTP.
+
+## Room galleries (chantier 8)
+
+Categories now have ordered `_rivage_gallery` attachment IDs managed through a protected administrator meta box and native Media Library. Three seeded photographs cover the bedroom/lounge, outdoor space and bathroom. Featured images independently supply catalogue cards. The `[rivage_room_gallery]` and `[rivage_room_outdoor]` shortcodes render the editable images. See [room galleries](room-gallery.md) for generation sources, media handling and browser verification.

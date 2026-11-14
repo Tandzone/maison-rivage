@@ -133,3 +133,7 @@ The user reported a remotely viewed page with CSS/images/fonts still pointing to
 ## D25 — Native booking date selection
 
 The user requested a date selector. Keep native date controls and enhance whole-field clicks with feature-detected `showPicker()`; preserve keyboard entry and the existing calendar icon as fallbacks. Avoid adding a calendar library for this interaction.
+
+## D26 — Bathrooms, editable room galleries and final browser review
+
+On 2026-11-14 the user approved completing chantier 8 with three photographs per category (bedroom/lounge, outdoor space, bathroom), coherent walk-in-shower bathroom concepts, an editable gallery and fullscreen viewer. They explicitly requested desktop/mobile, keyboard and date-calendar verification. This authorizes integrating the prior category visuals and the reviewed new views. Gallery editing uses native Media Library plus ordered attachment metadata; viewer controls support keyboard, focus containment/restoration and pointer swipes, without autoplay. Generated views remain fictional concepts. Browser access was restored and the requested checks passed; chantier 8 is complete within this scope, without claiming exhaustive accessibility certification.

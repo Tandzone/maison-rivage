@@ -4,7 +4,7 @@ These items are proposals, not approved decisions. Move accepted choices to `DEC
 
 ## Editorial and imagery follow-up
 
-- Three distinct garden/balcony/suite visuals are generated following user approval (D23); review results and integrate the selected images with responsive crops.
+- Nine category-specific bedroom/outdoor/bathroom images are integrated in editable galleries (D26); new variants can be considered later.
 
 - Maison Rivage's story and target guest profile; the hotel name is approved.
 - Review generated hall/event drafts before publication; see `VISUAL-REFERENCE.md`.

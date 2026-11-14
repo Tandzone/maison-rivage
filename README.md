@@ -2,11 +2,11 @@
 
 A fictional Madagascar-inspired boutique hotel website, built as a WordPress development portfolio project. Public content and administration labels are in English.
 
-**Current stage:** chantier 8 functional review passed; final browser/keyboard review is pending because browser access was unavailable. See [quality review](docs/quality-review.md).
+**Current stage:** chantiers 1–8 complete for the fictional portfolio scope; deployment remains next. Editable three-photo room galleries, bathroom imagery and fullscreen viewing are integrated. Desktop/mobile, keyboard and native date-picker checks passed. See [quality review](docs/quality-review.md).
 
  approved V2 interface with an operational room catalogue and editorial administration. The plugin manages category details, rates and six private physical rooms; the site renders those values dynamically. Events and journal content are operational; see [events workflow](docs/events-workflow.md). The reservation workflow is operational: availability search, email verification, manual room assignment, overlap prevention and guest notifications. See [booking workflow](docs/booking-workflow.md). See [project reference](docs/PROJECT.md), [approved brief](docs/project-brief.md), [site architecture](docs/site-architecture.md) and [content model](docs/content-model.md).
 
-The second visual pass adds a coastal wordmark, an asymmetric inside/outside opening, alternating room layouts and dedicated room facts. See [design direction](docs/design-direction.md) for the rationale. Images still use the approved atmosphere reference; category-specific galleries remain to be created.
+The second visual pass adds a coastal wordmark, an asymmetric inside/outside opening, alternating room layouts and dedicated room facts. See [design direction](docs/design-direction.md) for the rationale. Images still use the approved atmosphere reference; category-specific galleries are now integrated.
 
 ## Local development
 
@@ -29,7 +29,7 @@ The first design seeds only untouched starter pages (plus the original untouched
 
 The V2 design migration upgrades only the five untouched V1 home/room previews, checking content hashes normalized for the site URL. It preserves edited pages and stores the previous preview in `_rivage_design_v1_content` post metadata. Rerunning setup does not overwrite V2 editor content.
 
-The booking form is active as a fictional demonstration; the contact form queues demo messages to the administrator via the same outbox. Generated hall/event imagery and category illustrations are local previews, with category-specific galleries still to be prepared. User-approved fictional rates are 95 / 135 / 195 EUR per room, per night.
+The booking form is active as a fictional demonstration; the contact form queues demo messages to the administrator via the same outbox. Generated hall/event imagery and category illustrations are local previews, with category-specific galleries now integrated. User-approved fictional rates are 95 / 135 / 195 EUR per room, per night.
 
 ## Editing hotel content
 
@@ -103,7 +103,7 @@ Commit source, documentation and reference assets. Never commit `.env`, credenti
 - [WordPress child themes](https://developer.wordpress.org/themes/advanced-topics/child-themes/)
 - [Mailpit](https://mailpit.axllent.org/)
 
-Contact messages do not create reservations. Their bodies are cleared after SMTP acceptance and contact outbox rows expire after 24 hours. Local captured copies remain in Mailpit until cleared/reset. Original hotel PNGs are preserved; WebP derivatives provide lighter frontend delivery. Generation of three distinct category visuals is approved and the proposals are saved in `assets/concepts/`; review and live integration remain pending.
+Contact messages do not create reservations. Their bodies are cleared after SMTP acceptance and contact outbox rows expire after 24 hours. Local captured copies remain in Mailpit until cleared/reset. Original hotel PNGs are preserved; WebP derivatives provide lighter frontend delivery. Nine distinct bedroom/outdoor/bathroom photographs are integrated; raw PNGs and prompts are preserved in `assets/concepts/`. See [room galleries](docs/room-gallery.md).
 
 ## Private preview with Tailscale Serve
 
@@ -125,3 +125,5 @@ python3 scripts/tests/preview-http.py https://your-machine.your-tailnet.ts.net
 ```
 
 To disable the WordPress preview adapter, empty `RIVAGE_PREVIEW_URL` and run `./bin/dev up`. Tailscale Serve itself is managed separately. Mail remains captured in local Mailpit. Existing queued emails retain the URLs with which they were originally created; submit a fresh demo request from the intended origin when testing verification links remotely.
+
+Gallery editing: open a room category and expand **Meta Boxes → Maison Rivage — Room Gallery**. Choose media, reorder/remove photos and save the Page. Alternative text/captions are edited in Media Library. The Featured image independently controls catalogue cards. Run `./bin/dev wp eval-file /workspace/scripts/tests/gallery.php` for gallery permission/data checks.

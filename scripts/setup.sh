@@ -22,4 +22,5 @@ wp eval-file /workspace/scripts/seed-hotel.php
 wp eval-file /workspace/scripts/seed-booking.php
 wp eval-file /workspace/scripts/seed-events.php
 wp eval-file /workspace/scripts/seed-polish.php
+wp eval-file /workspace/scripts/seed-gallery.php
 echo 'Setup complete. Admin credentials are in your local .env file.'

@@ -154,3 +154,6 @@
 @media(max-width:600px) {
  .rivage-journal-grid .wp-block-post-template { grid-template-columns:1fr; gap:30px; }
 }
+/* Keep primary mobile header controls comfortably tappable. */
+.rivage-header .wp-block-button__link { min-height:44px; display:inline-flex; align-items:center; justify-content:center; }
+.rivage-navigation .wp-block-navigation__responsive-container-open { min-width:44px; min-height:44px; align-items:center; justify-content:center; }
