@@ -157,3 +157,6 @@
 /* Keep primary mobile header controls comfortably tappable. */
 .rivage-header .wp-block-button__link { min-height:44px; display:inline-flex; align-items:center; justify-content:center; }
 .rivage-navigation .wp-block-navigation__responsive-container-open { min-width:44px; min-height:44px; align-items:center; justify-content:center; }
+/* Separate the event photograph from its information panel without collapsing margins. */
+.single-rivage_event .rivage-main .wp-block-post-content { padding-block-start:clamp(24px,3vw,40px); }
+.single-rivage_event .rivage-event-facts:first-child { margin-block-start:0; }

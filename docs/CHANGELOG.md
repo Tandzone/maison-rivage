@@ -94,3 +94,7 @@
 - Added native-dialog fullscreen viewing, thumbnails, arrow/Enter/Space navigation, explicit Tab containment, Escape/focus restoration and pointer swipes, without autoplay. Fixed the focus escape discovered by browser testing. Increased header controls to 44px minimum height.
 - Passed 42 layout checks across 14 pages at 1280/768/320px, inspected additional 390px/screenshots, verified menu/skip links, selected real dates in native calendars and obtained availability results. Verified native media selection/reorder/Page save and HTTPS Tailscale gallery operation without console errors or loopback URLs.
 - Passed gallery permission/data tests, catalogue/bookings/events regressions, public/preview HTTP asset crawls, core/PHP checks and local SMTP. Practical browser verification is complete; no exhaustive accessibility certification is claimed. Next: chantier 9 deployment.
+
+## 2026-11-14 — Event detail photograph spacing
+
+- Added scoped, noncollapsing space between event Featured images and their information panel: approximately 38px at 1280px and 24px at 390px. Browser checks confirmed the gap and no mobile horizontal overflow. Other article templates are unaffected.
