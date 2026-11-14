@@ -112,3 +112,8 @@
 ## 2026-11-14 — Journal article photograph spacing
 
 - Added responsive spacing between a journal article's Featured image and its text, scoped to adjacent image/content blocks on single Posts. Browser measured approximately 38px on desktop and 24px at 390px, without horizontal overflow. Posts without Featured images receive no extra gap.
+
+## 2026-11-14 — Record user Lighthouse SEO report
+
+- Preserved the full supplied report locally under ignored audit artifacts and committed a compact sanitized summary. SEO-only mobile score: 61/100; failed checks are missing meta description and local noindex.
+- Tracked metadata/indexing review for deployment. Kept intentional local/private noindex unchanged; no performance or accessibility score is inferred from this report.

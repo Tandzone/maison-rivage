@@ -40,3 +40,7 @@ See `site-architecture.md` and D12 for approved pages, navigation and journeys.
 ## Separate portfolio project — Typesense search
 
 User interest recorded on 2026-11-13; separate from Maison Rivage. Build a second website demonstrating the user's professional experience over several years with search/indexing functionality. Use a free external dataset, subject to verifying its licence and redistribution/indexing permissions, and import it into a Typesense collection controlled by the project. Dataset, domain and technology stack remain undecided. Candidate scope to discuss: reproducible import/normalization, collection schema, full-text search, facets/filters, autocomplete, relevance tuning and index refresh. This is a future-project idea, not authorization to start implementation or deploy a service. Preserve chantier 8 as Maison Rivage's current work.
+
+## SEO follow-up before deployment
+
+User supplied a Lighthouse SEO-only mobile report on 2026-11-14: 61/100, missing meta description and intentional local noindex. Add public-page descriptions and review production indexing at chantier 9; keep local/private workflow exclusions. Re-run after deployment. See `quality-review.md` and `lighthouse-seo-2026-11-14.json`. No optimization implementation was requested in the report-sharing message.

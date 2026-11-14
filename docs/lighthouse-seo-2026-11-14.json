@@ -1,0 +1,26 @@
+{
+  "lighthouseVersion": "13.5.0",
+  "requestedUrl": "http://localhost:8080/",
+  "fetchTime": "2026-11-14T19:13:44.555Z",
+  "formFactor": "mobile",
+  "onlyCategories": [
+    "seo"
+  ],
+  "scores": {
+    "seo": 0.61
+  },
+  "failedAudits": [
+    {
+      "id": "meta-description",
+      "title": "Document does not have a meta description",
+      "score": 0,
+      "displayValue": null
+    },
+    {
+      "id": "is-crawlable",
+      "title": "Page is blocked from indexing",
+      "score": 0,
+      "displayValue": null
+    }
+  ]
+}

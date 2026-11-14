@@ -50,7 +50,7 @@ Private remote preview through the existing Tailscale Serve proxy is configured 
 
 Chantiers 1–8 are complete within the fictional portfolio scope. Three category galleries each contain bedroom, outdoor and ensuite photographs, with a fullscreen keyboard/pointer viewer and native Media Library editing. Browser access was restored on 2026-11-14: desktop/tablet/mobile layouts, viewer focus and navigation, mobile menu, skip links, native date selection and availability results were verified. See `room-gallery.md` and the updated `quality-review.md` for evidence and limits.
 
-Choose an economical WordPress host, then configure production HTTPS, SMTP, scheduled tasks and backups. The current Tailscale setup remains a private local preview. The separate Typesense idea is not part of Maison Rivage. Upwork case study/screenshots belong to chantier 10. Repository: https://github.com/Tandzone/maison-rivage (`main`). No production deployment has occurred.
+Choose an economical WordPress host, then configure production HTTPS, SMTP, scheduled tasks and backups. Include the recorded Lighthouse SEO follow-up: public-page meta descriptions and a deliberate production indexing review (local noindex is intentional); see `quality-review.md`. The current Tailscale setup remains a private local preview. The separate Typesense idea is not part of Maison Rivage. Upwork case study/screenshots belong to chantier 10. Repository: https://github.com/Tandzone/maison-rivage (`main`). No production deployment has occurred.
 
 ## Memory map
 

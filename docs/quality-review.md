@@ -51,3 +51,14 @@ Contact HTTP checks leave a disposable captured email in Mailpit and consume the
 Screenshots/layout records are local ignored review artifacts in `artifacts/previews/`: `room-gallery-desktop.png`, `room-gallery-mobile.png`, `room-bathroom-viewer.png`, `chantier-8-layout-checks.json`.
 
 The review uses browser viewport sizes and practical keyboard checks. It is not a physical-device/Safari/screen-reader certification, a dedicated browser-zoom audit, or a measured performance score. Production HTTPS/SMTP/cron/backups and final hosting checks remain chantier 9; portfolio captures/case study remain chantier 10.
+
+## User-provided Lighthouse SEO report — 2026-11-14
+
+Lighthouse 13.5.0 audited `http://localhost:8080/` in mobile simulation at `2026-11-14T19:13:44.555Z`. Only the SEO category was enabled: score **61/100**. No performance, accessibility or best-practices score was supplied by this report.
+
+Two failed audits:
+
+- Missing meta description. Add descriptive metadata for indexable public pages before production and verify the rendered result.
+- Indexing blocked by `<meta name="robots" content="noindex, nofollow" />`. This is intentional for the local/private demonstration. Keep it until public deployment; then review indexing for public editorial pages while retaining appropriate exclusions on request/verification/receipt and other private workflow routes.
+
+Do not interpret this local SEO score as a production score or change indexing merely to improve Lighthouse. Re-run SEO after deployment configuration and record the new report. Sanitized summary: `lighthouse-seo-2026-11-14.json`. The original user report is preserved locally in ignored `artifacts/audits/lighthouse-seo-2026-11-14.json`.
