@@ -98,3 +98,9 @@
 ## 2026-11-14 — Event detail photograph spacing
 
 - Added scoped, noncollapsing space between event Featured images and their information panel: approximately 38px at 1280px and 24px at 390px. Browser checks confirmed the gap and no mobile horizontal overflow. Other article templates are unaffected.
+
+## 2026-11-14 — Maison Rivage favicon
+
+- Added a square 512px Site Icon derived from the existing M-and-waves SVG monogram, with green strokes on ivory and transparent rounded corners.
+- Seeded the native WordPress `site_icon` attachment/option and 32/180/192/270px variants; repeat setup preserves an administrator's replacement or deliberate removal. SVG source and PNG master are tracked.
+- Verified native favicon/touch-icon tags, exact 32/192px PNG dimensions and successful image delivery through localhost and private Tailscale HTTPS.

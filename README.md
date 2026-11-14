@@ -127,3 +127,5 @@ python3 scripts/tests/preview-http.py https://your-machine.your-tailnet.ts.net
 To disable the WordPress preview adapter, empty `RIVAGE_PREVIEW_URL` and run `./bin/dev up`. Tailscale Serve itself is managed separately. Mail remains captured in local Mailpit. Existing queued emails retain the URLs with which they were originally created; submit a fresh demo request from the intended origin when testing verification links remotely.
 
 Gallery editing: open a room category and expand **Meta Boxes → Maison Rivage — Room Gallery**. Choose media, reorder/remove photos and save the Page. Alternative text/captions are edited in Media Library. The Featured image independently controls catalogue cards. Run `./bin/dev wp eval-file /workspace/scripts/tests/gallery.php` for gallery permission/data checks.
+
+The favicon uses the existing M-and-waves monogram. Editable SVG and 512px PNG masters live in `wp-content/themes/maison-rivage/assets/images/site-icon.*`. Setup configures the native WordPress Site Icon once and preserves later administrator changes or deliberate removal.

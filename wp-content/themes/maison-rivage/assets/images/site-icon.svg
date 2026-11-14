@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
+  <title>Maison Rivage</title>
+  <rect width="64" height="64" rx="10" fill="#f8f7f2"/>
+  <g transform="translate(8 2)" fill="none" stroke="#183e35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 29V10L24 25L38 10V29"/>
+    <path d="M5 39C12 32 19 46 26 39C33 32 40 44 44 38M5 47C12 40 19 54 26 47C33 40 40 52 44 46"/>
+  </g>
+</svg>
